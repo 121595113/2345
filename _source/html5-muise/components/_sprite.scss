@@ -1,0 +1,3 @@
+$corner:sprite-map("corner/*.png", $spacing: 4px);
+$foot:sprite-map("foot/*.png", $spacing: 4px);
+@include rem-sprites($foot);

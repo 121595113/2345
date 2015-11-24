@@ -1,0 +1,9 @@
+$base-value: 1 !default;
+
+@function rem-calc($values) {
+  $max: length($values);
+
+  @if $max == 1 {
+    @return unquote(floor($values/$base-value)+ 'px');
+  }
+}

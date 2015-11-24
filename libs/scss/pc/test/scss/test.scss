@@ -1,0 +1,65 @@
+//from libs scss
+@import
+  "pc/global";
+
+//animations
+.animations{
+  @include animation(flyin 1s ease .1s forwards);
+}
+
+//keyframes
+@include keyframes(goldBig){
+  to{
+    left: 156px;
+    top: 0px;
+    opacity: 1;
+  }
+}
+@include keyframes(bubbleOne){
+  $bubbleOneList: 0, -20, 0, 20, 0;
+  $length: length($bubbleOneList);
+  @for $index from 1 through $length{
+    $per: percentage(($index - 1)*0.25);
+    $translateY: unquote(nth($bubbleOneList, $index) + 'px');
+    #{$per}{
+      @include transform(translate3d(0, $translateY, 0));
+    }
+  }
+}
+
+//transform
+.transform{
+  @include transform(translate3d(0, 0, 0));
+}
+
+//transition
+.transition{
+  @include transition(opacity .8s ease-in);
+}
+
+.flex{
+  &-box{
+    @include flex-box();
+  }
+  &-dir{
+    @include flex-dir(column, vertical);
+  }
+  &-wrap-fix{
+    @include flex-wrap-fix(wrap, multiple);
+  }
+  &-deuce{
+    @include flex-deuce(1);
+  }
+  &-order{
+    @include flex-order(1);
+  }
+  &-pack{
+    @include flex-pack(center);
+  }
+  &-pack-defined{
+    @include flex-pack(justify, space-between);
+  }
+  &-align{
+    @include flex-align(center);
+  }
+}

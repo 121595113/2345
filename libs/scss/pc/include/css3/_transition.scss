@@ -1,0 +1,3 @@
+@mixin transition($property: none) {
+  @include prefixer(transition, $property, webkit moz spec);
+}

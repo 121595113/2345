@@ -1,0 +1,3 @@
+@mixin animation($animations...) {
+  @include prefixer(animation, $animations, webkit moz spec);
+}

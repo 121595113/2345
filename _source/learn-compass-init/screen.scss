@@ -1,0 +1,16 @@
+@import "../_function/moblie-mixin";
+$cur: sprite-map("cur/*.png", $spacing: 15px);
+@include rem-sprites($cur);
+$cur2: sprite-map("cur2/*.png", $spacing: 15px);
+@include rem-sprites($cur2);
+div{
+ @include rem-sprite($cur2,lv1,$active:true);
+}
+// span{
+//  @include rem-sprite($cur2,lv2,$active:true);
+// }
+
+
+
+
+// @import "cur";

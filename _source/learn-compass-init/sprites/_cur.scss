@@ -1,0 +1,137 @@
+@import "compass/utilities/sprites/base";
+
+// General Sprite Defaults
+// You can override them before you import this file.
+$cur-sprite-dimensions : false !default;
+$cur-use-percentages   : false !default;
+$cur-position          : 0% !default;
+$cur-spacing           : 0 !default;
+$cur-repeat            : no-repeat !default;
+$cur-prefix            : '' !default;
+$cur-clean-up          : true !default;
+$cur-layout            : vertical !default;
+$cur-inline            : false !default;
+$cur-sort-by           : 'none' !default;
+$cur-class-separator   : $default-sprite-separator !default;
+$cur-sprite-base-class : ".cur#{$cur-class-separator}sprite" !default;
+
+  
+ // These variables control the generated sprite output
+ // You can override them selectively before you import this file.
+ 
+   $cur-lv1-position: $cur-position !default;
+   $cur-lv1-spacing:  $cur-spacing !default;
+   $cur-lv1-repeat:   $cur-repeat !default;
+ 
+   $cur-lv2-position: $cur-position !default;
+   $cur-lv2-spacing:  $cur-spacing !default;
+   $cur-lv2-repeat:   $cur-repeat !default;
+ 
+   $cur-lv3-position: $cur-position !default;
+   $cur-lv3-spacing:  $cur-spacing !default;
+   $cur-lv3-repeat:   $cur-repeat !default;
+ 
+   $cur-lv4-position: $cur-position !default;
+   $cur-lv4-spacing:  $cur-spacing !default;
+   $cur-lv4-repeat:   $cur-repeat !default;
+ 
+   $cur-lv5-position: $cur-position !default;
+   $cur-lv5-spacing:  $cur-spacing !default;
+   $cur-lv5-repeat:   $cur-repeat !default;
+ 
+   $cur-lv6-position: $cur-position !default;
+   $cur-lv6-spacing:  $cur-spacing !default;
+   $cur-lv6-repeat:   $cur-repeat !default;
+ 
+   $cur-lv7-position: $cur-position !default;
+   $cur-lv7-spacing:  $cur-spacing !default;
+   $cur-lv7-repeat:   $cur-repeat !default;
+ 
+
+ $cur-sprites: sprite-map("cur/*.png",
+ 
+   $cur-lv1-position: $cur-lv1-position, 
+   $cur-lv1-spacing:  $cur-lv1-spacing, 
+   $cur-lv1-repeat:   $cur-lv1-repeat,
+ 
+   $cur-lv2-position: $cur-lv2-position, 
+   $cur-lv2-spacing:  $cur-lv2-spacing, 
+   $cur-lv2-repeat:   $cur-lv2-repeat,
+ 
+   $cur-lv3-position: $cur-lv3-position, 
+   $cur-lv3-spacing:  $cur-lv3-spacing, 
+   $cur-lv3-repeat:   $cur-lv3-repeat,
+ 
+   $cur-lv4-position: $cur-lv4-position, 
+   $cur-lv4-spacing:  $cur-lv4-spacing, 
+   $cur-lv4-repeat:   $cur-lv4-repeat,
+ 
+   $cur-lv5-position: $cur-lv5-position, 
+   $cur-lv5-spacing:  $cur-lv5-spacing, 
+   $cur-lv5-repeat:   $cur-lv5-repeat,
+ 
+   $cur-lv6-position: $cur-lv6-position, 
+   $cur-lv6-spacing:  $cur-lv6-spacing, 
+   $cur-lv6-repeat:   $cur-lv6-repeat,
+ 
+   $cur-lv7-position: $cur-lv7-position, 
+   $cur-lv7-spacing:  $cur-lv7-spacing, 
+   $cur-lv7-repeat:   $cur-lv7-repeat,
+ 
+ $layout   : $cur-layout,
+ $cleanup  : $cur-clean-up,
+ $spacing  : $cur-spacing,
+ $position : $cur-position,
+ $sort-by  : $cur-sort-by
+ );
+
+
+// All sprites should extend this class
+// The cur-sprite mixin will do so for you.
+@if $cur-inline {
+  #{$cur-sprite-base-class} {
+    background-image: inline-sprite($cur-sprites);
+  } 
+} @else {
+  #{$cur-sprite-base-class} {
+    background-image: sprite-url($cur-sprites);
+    background-repeat: no-repeat;
+  }
+}
+//sass functions to return the dimensions of a sprite image as units
+
+  @function cur-sprite-width($name) {
+    @return sprite-width($cur-sprites, $name);
+  }
+
+  @function cur-sprite-height($name) {
+    @return sprite-height($cur-sprites, $name);
+  }
+
+
+// Use this to set the dimensions of an element
+// based on the size of the original image.
+@mixin cur-sprite-dimensions($name) {
+  @include sprite-dimensions($cur-sprites, $name)
+}
+
+// Move the background position to display the sprite.
+@mixin cur-sprite-position($name, $offset-x: 0, $offset-y: 0, $use-percentages: $cur-use-percentages) {
+  @include sprite-background-position($cur-sprites, $name, $offset-x, $offset-y, $use-percentages)
+}
+
+// Extends the sprite base class and set the background position for the desired sprite.
+// It will also apply the image dimensions if $dimensions is true.
+@mixin cur-sprite($name, $dimensions: $cur-sprite-dimensions, $offset-x: 0, $offset-y: 0, $use-percentages: $cur-use-percentages, $separator: $cur-class-separator) {
+  @extend #{$cur-sprite-base-class};
+  @include sprite($cur-sprites, $name, $dimensions, $offset-x, $offset-y, $use-percentages, $separator: $separator);
+}
+
+@mixin cur-sprites($sprite-names, $dimensions: $cur-sprite-dimensions, $prefix: sprite-map-name($cur-sprites), $offset-x: 0, $offset-y: 0, $use-percentages: $cur-use-percentages, $separator: $cur-class-separator) {
+  @include sprites($cur-sprites, $sprite-names, $cur-sprite-base-class, $dimensions, $prefix, $offset-x, $offset-y, $use-percentages, $separator: $separator)
+}
+
+// Generates a class for each sprited image.
+@mixin all-cur-sprites($dimensions: $cur-sprite-dimensions, $prefix: sprite-map-name($cur-sprites), $offset-x: 0, $offset-y: 0, $use-percentages: $cur-use-percentages, $separator: $cur-class-separator) {
+  @include cur-sprites(lv1 lv2 lv3 lv4 lv5 lv6 lv7, $dimensions, $prefix, $offset-x, $offset-y, $use-percentages, $separator: $separator);
+}
