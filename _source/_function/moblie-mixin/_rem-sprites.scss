@@ -35,6 +35,7 @@
         @return rem-calc(sprite-height($map));
     }
 }
+
 $lists:() !default;
 @mixin rem-sprite($map, $name, $dimensions:true, $active:false) {
     $dir-name: sprite-map-name($map);
