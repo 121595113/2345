@@ -84,7 +84,7 @@ $lists:() !default;
         }
     }
     
-    @if map-get($modules, $my-args) !=null {
+    @if (index($modules,$my-args) !=null) {
         & {
             @extend %#{$my-args};
         }
