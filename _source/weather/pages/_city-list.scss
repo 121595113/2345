@@ -1,0 +1,80 @@
+// @import "../components/weather-table";
+%city02{
+	.bmeta{	
+		margin: rem-calc(24) rem-calc(28);
+		a{
+			color: #666;
+		}
+	}	
+}
+// 城市列表
+@include city-list-module(city-list){
+	@include weather-table(3);
+	@extend %city02;
+	a:active{
+		color: #268dea;
+	}
+}
+// 乡镇列表
+@include city-list-module(town-list){
+	@include weather-table(3);
+	@extend %city02;
+	a:active{
+		color: #268dea;
+	}
+}
+// 省份列表
+@include city-list-module(select-list){
+	@include weather-table(5){
+		td{
+			padding: rem-calc(25) rem-calc(20);
+		}
+		a:active{
+			color: #268dea;
+		}
+	}
+	@extend %city02;
+}
+// 选择城市
+@include city-list-module(select-city){
+	.bmeta{
+		margin-top: rem-calc(24);
+		padding: 0 rem-calc(27) 0 rem-calc(23);
+		border-top: 1px solid #e5e5e5;
+		dt{
+			float: left;
+			width: rem-calc(40);
+			height: rem-calc(40);
+			margin-left: rem-calc(9);
+			margin-top: rem-calc(29);
+			line-height: rem-calc(40);
+			border: 1px solid #e5e5e5;
+			border-radius: rem-calc(5);
+			font-size: rem-calc(30);
+			text-align: center;
+			background: #f2f2f2;
+			color: #268dea;
+		}
+		dd{
+			padding-top: rem-calc(29);
+			padding-left: rem-calc(55);
+			border-bottom: 1px solid #e5e5e5;
+			&:last-of-type{
+				border: none;
+			}
+			a{
+				display: inline-block;
+				margin: 0 rem-calc(15) rem-calc(32) rem-calc(30);
+				line-height: rem-calc(40);
+				font-size: rem-calc(32);
+				&:active,&.active{
+					color: #268dea;
+				}
+			}
+		}
+	}
+}
+
+
+
+

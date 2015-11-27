@@ -1,0 +1,17 @@
+@import "mixin/rem-sprites";
+// 天气大图标
+$wl-icon:sprite-map("wl/*.png", $spacing: 4px);
+@include rem-sprites($wl-icon);
+
+
+// 天气小图标
+$ws-icon:sprite-map("ws/*.png", $spacing: 4px);
+@include rem-sprites($ws-icon);
+
+// 空气质量
+$aqi-icon:sprite-map("aqi-icon/*.png", $spacing: 4px);
+@include rem-sprites($aqi-icon);
+
+// 生活指数
+$life-icon:sprite-map("life/*.png", $spacing: 4px);
+@include rem-sprites($life-icon);

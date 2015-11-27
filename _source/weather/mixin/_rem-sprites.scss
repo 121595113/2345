@@ -1,0 +1,103 @@
+// 使用说明：此文档基于_rem-calc.scss,在引入此文档之前引入_rem-calc.scss，也可以将_rem-calc.scss引到此文档
+// 一.mixin ＊
+// 1.rem-sprites($map[,$dimensions])
+// 生成所有文件样式
+// $map为必填参数,值为sprite-map()得到的变量
+// $dimensions为可选参数，参数为布尔值。值为true表示输出宽和高，值为false时，不输出宽和高
+// 2.rem-sprite($map,$name[,$dimensions])
+// 生成指定文件样式，必须放在元素内部
+// $map为必填参数,值为sprite-map()得到的变量
+// $name为必填参数，值为图片的名称
+// $dimensions为可选参数，参数为布尔值。值为true表示输出宽和高，值为false时，不输出宽和高
+// 二.function
+// 1.calc-width($map[,$item])
+// 计算元算的rem单位的宽度，第一个参数为必填参数，值为sprite-map()得到的变量，第二个参数为可选参数，值为$map的字元素名称
+// 2.calc-height($map[,$item])
+// 计算元算的rem单位的高度，第一个参数为必填参数，值为sprite-map()得到的变量，第二个参数为可选参数，值为$map的字元素名称
+@import "compass";
+// 以rem为单位计算宽度
+@function calc-width($map, $item:null) {
+    @if $item {
+        @return rem-calc(sprite-width($map, $item));
+    }
+    @else {
+        @return rem-calc(sprite-width($map));
+    }
+}
+
+// 以rem为单位计算高度
+@function calc-height($map, $item:null) {
+    @if $item {
+        @return rem-calc(sprite-height($map, $item));
+    }
+    @else {
+        @return rem-calc(sprite-height($map));
+    }
+}
+
+// 自意识混合宏示例{{{
+// 定义全局 map，保存混合宏的相关信息
+$my-mixin-info: ();
+// 使用任意形式的参数定义混合宏
+@mixin public-abc($id, $dimensions, $map, $name) {
+    // 扩展该占位符(公共部分)
+    & {
+        @extend %#{$id};
+    }
+    // 生成任意特定的样式(私有部分)
+    @if $dimensions {
+        & {
+            width: calc-width($map, $name);
+            height: calc-height($map, $name);
+            background-position: rem-calc(sprite-position($map, $name));
+        }
+    }
+    @else {
+        & {
+            background-position: rem-calc(sprite-position($map, $name));
+        }
+    }
+}
+
+@mixin rem-sprite($map, $name, $dimensions:true) {
+    // 根据需要，捕获部分或全部参数
+    $dir-name: sprite-map-name($map);
+    $my-args: ($dir-name);
+    // 在全局 map 中通过 key($my-args) 查找这些参数
+    $id: map-get($my-mixin-info, $my-args);
+    // 如果找到了 id  
+    @if $id {
+        // 扩展该 id
+        @include public-abc($id, $dimensions, $map, $name);
+    }
+    // 否则
+    @else {
+        // 新建一个 id
+        $id: unique-id();
+        // 将该 id 整合入混合宏的 map 中
+        $my-mixin-info: map-merge($my-mixin-info, ($my-args: $id)) !global;
+        // 在样式顶层生成占位符
+        @at-root {
+            %#{$id} {
+                // 生成共有样式
+                background: $map;
+                background-size: calc-width($map) calc-height($map);
+                background-repeat: no-repeat;
+            }
+        }
+        // 扩展该占位符
+        @include public-abc($id, $dimensions, $map, $name);
+    }
+}
+// 自意识混合宏示例}}}
+
+@mixin rem-sprites($map, $dimensions:true) {
+    $list: sprite-names($map);
+    $dir-name: sprite-map-name($map);
+    @for $i from 1 through length($list) {
+        $name: nth($list, $i);
+        .#{$dir-name+"-"+$name} {
+            @include rem-sprite($map, $name, $dimensions);
+        }
+    }
+}

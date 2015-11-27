@@ -1,0 +1,475 @@
+@charset "utf-8";
+// 预置
+$rem-base: 28px; 
+@import "compass",
+"../../function/rem-calc",
+"base/media-layout";
+@import "base/reset";
+@include global_reset_m();
+
+.wrapper{
+	font-size: rem-calc(24);
+}
+body{
+	font-family: Microsoft Yahei, sans-serif;
+}
+// 页头
+header{
+	position: relative;
+	background: #0e95f3;
+	height: rem-calc(70);
+	.title{
+		text-align: center;
+		line-height: rem-calc(70);
+		font-size: rem-calc(32);
+		color: #fff;
+	}
+	.back{
+		position: absolute;	
+		left: 0;
+		top: 0;
+		padding: 0 rem-calc(24);
+		line-height: rem-calc(70);
+		font-size: rem-calc(32);
+		color: #fff;
+	}
+	.back-icon{
+		&:before{
+			content: "";
+			display: inline-block;
+			$back-img:"back-icon.png";
+			width: rem-calc(image-width(#{$back-img}));
+			height: rem-calc(image-height(#{$back-img}));
+			margin-right: rem-calc(4);
+			vertical-align: 5%;
+			background: inline-image(#{$back-img});
+			background-size: rem-calc(image-width(#{$back-img})) rem-calc(image-height(#{$back-img}));
+		}
+	}
+}
+// 实时天气
+@import "components/today-weather-detail";
+// 一周实时
+%left-d{
+	left: rem-calc(32);
+}
+%right-d{
+	right: rem-calc(37);
+}
+@include today-weather-detail(today-7d-detail){
+	.city-name{
+		top: rem-calc(40);
+		@extend %left-d;
+	}
+	.temperature{
+		top:rem-calc(100);
+		@extend %left-d;
+	}
+	.updated{
+		top:rem-calc(207);
+		@extend %left-d;
+	}
+	.weather-icon{
+		top:rem-calc(100);
+		@extend %right-d;
+	}
+	.primary{
+		top:rem-calc(270);
+		@extend %left-d;
+	}
+	.air-quality{
+		top: rem-calc(270);
+		@extend %right-d;
+	}
+}
+// 三天实时
+@include today-weather-detail(today-3d-detail){
+	height: rem-calc(320);
+	.city-name{
+		top: rem-calc(80-40);
+		@extend %right-d;
+	}
+	.temperature{
+		top:rem-calc(70-40);
+		@extend %left-d;
+	}
+	.updated{
+		top:rem-calc(200-40);
+		@extend %left-d;
+	}
+	.weather-icon{
+		top:rem-calc(140-40);
+		@extend %right-d;
+	}
+	.primary{
+		top:rem-calc(260-40);
+		@extend %left-d;
+	}
+	.air-quality{
+		display: none;
+		top: rem-calc(270-40);
+		@extend %right-d;
+	}
+}
+// 五天实时
+@include today-weather-detail(today-5d-detail){
+	height: rem-calc(320);
+	.city-name{
+		top: rem-calc(55-20);
+		@extend %right-d;
+	}
+	.temperature{
+		top:rem-calc(40-20);
+		@extend %left-d;
+	}
+	.updated{
+		top:rem-calc(180-20);
+		@extend %left-d;
+	}
+	.weather-icon{
+		top:rem-calc(130-20);
+		@extend %right-d;
+	}
+	.primary{
+		top:rem-calc(250-20);
+		@extend %left-d;
+	}
+	.air-quality{
+		display: none;
+		top: rem-calc(270-20);
+		@extend %right-d;
+	}
+}
+// 十天实时
+@include today-weather-detail(today-10d-detail){
+	.city-name{
+		top: rem-calc(40);
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+	.temperature{
+		top:rem-calc(90);
+		@extend %left-d;
+	}
+	.updated{
+		top:rem-calc(210);
+		@extend %left-d;
+	}
+	.weather-icon{
+		top:rem-calc(135);
+		@extend %right-d;
+	}
+	.primary{
+		top:rem-calc(270);
+		@extend %left-d;
+	}
+	.air-quality{
+		display: none;
+		top: rem-calc(270);
+		@extend %right-d;
+	}
+}
+// 十五天实时
+@include today-weather-detail(today-15d-detail){
+	.city-name{
+		top: rem-calc(40);
+		@extend %left-d;
+	}
+	.temperature{
+		top:rem-calc(115);
+		@extend %left-d;
+	}
+	.updated{
+		top: rem-calc(40);
+		@extend %right-d;	
+	}
+	.weather-icon{
+		top:rem-calc(104);
+		@extend %right-d;
+	}
+	.primary{
+		top:rem-calc(275);
+		@extend %right-d;
+		
+	}
+	.air-quality{
+		top: rem-calc(275);
+		@extend %left-d;
+	}
+}
+// 三十天实时
+@include today-weather-detail(today-30d-detail){
+	.city-name{
+		top: rem-calc(40);
+		@extend %left-d;
+	}
+	.temperature{
+		top:rem-calc(115);
+		@extend %left-d;
+	}
+	.updated{
+		top: rem-calc(40);
+		@extend %right-d;	
+	}
+	.weather-icon{
+		top:rem-calc(104);
+		@extend %right-d;
+	}
+	.primary{
+		top:rem-calc(275);
+		@extend %right-d;
+		
+	}
+	.air-quality{
+		top: rem-calc(275);
+		@extend %left-d;
+	}
+}
+// 七日天气
+.days7-weather{
+	@at-root{
+		.wealist{
+			display: table;
+			width: 100%;
+			border-collapse: collapse;
+			font-size: rem-calc(32);
+			li{
+				line-height: rem-calc(85);
+				display: table-row;
+				@include display-flex(flex);
+				border-bottom: 1px solid #f0f3f5;
+				&:last-child{
+					border:none;
+				}
+				%white-space{
+					white-space: nowrap;
+				}
+				>div{
+					display: table-cell;
+				}
+				.date{
+					@include flex(0 1 33%);
+					padding-left: rem-calc(30);
+					@extend %white-space;
+					color: #999;
+					span{
+						color: #666;
+					}
+				}
+				.phrase{
+					@include flex(1 1 30%);
+					@extend %white-space;
+					margin: 0 auto;
+					text-align: left;
+					color: #666;
+					span{
+						display: inline-block;
+						margin-right: rem-calc(15);
+						vertical-align: -10%;
+					}
+				}
+				.temperature{
+					padding-right: rem-calc(42);
+					text-align: right;
+					color: #c1c1c1;
+					.low{
+						color: #0e95f3;
+					}
+					.high{
+						color: #ff8814;
+					}
+				}
+				%color2{
+					color: #333;
+				}
+				%color1{
+					span{
+						@extend %color2;
+					}	
+				}
+				&.today{
+					.date{
+						@extend %color1;
+					}
+					.phrase{
+						@extend %color2;
+					}
+				}
+				&.tomorrow{
+					.date{
+						@extend %color1;
+					}
+					.phrase{
+						@extend %color2;
+					}	
+				}
+				&.rest-day .date span{
+					color: #0e95f3;
+				}
+			}
+		}
+	}
+}
+// 引用创建模块minxin
+@import "components/new-module";
+
+// 今日生活指数页面
+@include new-module(today-life-index){
+	.bmeta{
+		dt{		
+			display: table;
+			@include display-flex(flex);
+			@include align-items(center);
+			width: 100%;
+			box-sizing: border-box;
+			padding: rem-calc(40) 0 rem-calc(20) rem-calc(55);
+			div{
+				display: table-cell;
+				vertical-align: middle;
+				width: rem-calc(64);
+			}
+			img{
+				width: rem-calc(66);
+				height: rem-calc(66);
+			}
+			p{
+				display: table-cell;
+				vertical-align: middle;
+				padding-left: rem-calc(30);
+				font-size: rem-calc(30);
+				line-height: rem-calc(50);
+			}
+		}
+		dd{
+			display: table;
+			@include display-flex(flex);
+			width: 100%;
+			border-collapse: collapse;
+			border-top: 1px solid #e5e5e5;
+			div{
+				display: table-cell;
+				@include display-flex(flex);
+				@include align-items(center);
+				width: 50%;
+				padding: rem-calc(24) 0 rem-calc(24) rem-calc(50);
+			}
+			span{
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: rem-calc(30);
+				@include flex(0 0 rem-calc(58));
+			}
+			p{
+				display: inline-block;
+				vertical-align: middle;
+				font-size: rem-calc(30);
+			}
+		}
+	}
+}
+// 引入空气质量pm2.5模块
+@import "components/aqi-pm";
+// 空气污染指数
+@include new-module(aqi-pm){
+	.aqi_container{
+		padding: rem-calc(57) 0 rem-calc(40);
+		overflow: hidden;
+		h3{
+			text-align: center;
+			font-size: rem-calc(36);
+			margin-bottom: rem-calc(58);
+		}
+	}
+}
+
+// 热门天气查询
+@import "components/weather-table";
+%city01{
+	.bmeta{
+		@include weather-table(2){
+			margin: rem-calc(17) rem-calc(28);
+		}
+	}	
+}
+@include new-module(hot-city){
+	@extend %city01;
+}
+// 上海周边天气查询
+@include new-module(nearby-city){
+	@extend %city01;
+	padding-bottom: rem-calc(40);
+}
+@import "pages/city-list";
+// 天气icons
+@import "components/weather-icon";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

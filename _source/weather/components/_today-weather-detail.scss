@@ -1,0 +1,102 @@
+%pos{
+	position: absolute;
+}
+%color{
+	color: rgba(255,255,255, .57);
+}
+%today-weather-detail{
+	position: relative;
+	height: rem-calc(358);
+	background: #21a4ff;
+	color: #fff;
+	.city-name{
+		@extend %pos;
+		font-size: rem-calc(42);
+		a{
+			@include unstyled-link;
+			// &:before{
+			// 	content: "";
+			// 	display: inline-block;
+			// 	width: rem-calc(21);
+			// 	height: rem-calc(28);
+			// 	margin-right: rem-calc(5);
+			// 	background: inline-image("landmark.png");
+			// 	background-size: rem-calc(21) rem-calc(28);
+			// }
+		}
+		b{
+			font-weight: normal;
+			font-size: rem-calc(32);
+			color:rgba(255, 255, 255, .57);
+		}
+	} 
+	.temperature{
+		@extend %pos;
+		font-size: rem-calc(90);
+		span{
+			@extend %color;
+			display: inline-block;
+			vertical-align: text-top;
+			margin-top: rem-calc(20);
+			font-size: rem-calc(50);
+		}
+		s{
+			@extend %color;
+			display: inline-block;
+			vertical-align: text-top;
+			line-height: 1;
+			margin-top: rem-calc(40);
+			text-decoration: none;
+			font-size: rem-calc(40);
+		}
+	}
+	.updated{
+		@extend %pos;
+		font-size: rem-calc(34);
+		span{
+			@extend %color;
+		}
+	}
+	.weather-icon{
+		@extend %pos;
+		text-align: right;
+		span{
+			display: inline-block;
+		}
+	}
+	.phrase{
+		font-size: rem-calc(42);
+	}
+	.primary{
+		@extend %pos;
+		margin-right: auto;
+		font-size: rem-calc(32);
+	}
+	.air-quality{
+		@extend %pos;
+		text-align: right;
+		font-size: rem-calc(32);
+		[class*=aqi]{
+			display: inline-block;
+			margin-right: rem-calc(15);
+			vertical-align: -13%;
+		}
+		.number{
+			&:before{
+				content: "|";
+				display: inline-block;
+				font-size: .8em;
+				vertical-align: 5%;
+				color:#74bff3; 
+				margin: 0 rem-calc(10) 0 rem-calc(15);
+			}
+		}
+	}
+}
+@mixin today-weather-detail($name) {
+	.#{$name}{
+		@extend %today-weather-detail;
+		@content;
+	}
+	
+}

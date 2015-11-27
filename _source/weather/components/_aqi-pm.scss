@@ -1,0 +1,43 @@
+.progress{
+  $width: rem-calc(658);
+  $height:rem-calc(64);
+  width:$width;
+  height:$height;
+  margin:0 auto rem-calc(90);
+  background: url('http://waptianqi.2345.com/images/aqi-detail-140710@720.png') no-repeat;
+  background-size: $width $height;
+  .scale{
+    position:relative;
+    height:$height;
+    margin: 0 rem-calc(41px) 0 rem-calc(14px);
+  }
+  .cur{
+    position:absolute;
+    top:rem-calc(43*1.5);
+    $width: rem-calc(71);
+    $height: rem-calc(83);
+    width:$width;
+    height:$height;
+    margin-left: - $width/2;
+    text-align: center;
+    line-height: rem-calc(90);
+    color: #fff;
+    font-size: rem-calc(25);
+  }
+}
+
+$aqiIndexColor2: (#66cc00, #fbd12a, #ffa641, #fe0000, #cc0001, #970454, #62001e);
+@for $aqiIndex from 1 through length($aqiIndexColor2){
+  $color: nth($aqiIndexColor2, $aqiIndex);
+  .aqi-pm-lv#{$aqiIndex}{
+    .phrase{
+      color: $color;
+    }
+    .progress{
+      .cur{
+        background: url(http://waptianqi.2345.com/images/aqi-detail-cur150923@720/lv#{$aqiIndex}.png) no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
