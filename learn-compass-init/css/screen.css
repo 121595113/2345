@@ -45,7 +45,7 @@
   background-position: 0 -38.625rem;
 }
 
-.cur2-lv1-active, .cur2-lv1, .cur2-lv1:active, .cur2-lv2-active, .cur2-lv2, .cur2-lv2:active, .cur2-lv3, .cur2-lv4, .cur2-lv5, .cur2-lv6, .cur2-lv7, div, div:active {
+.cur2-lv1-active, .cur2-lv1, .cur2-lv1:active, .cur2-lv2-active, .cur2-lv2, .cur2-lv2:active, .cur2-lv3, .cur2-lv4, .cur2-lv5, .cur2-lv6, .cur2-lv7, div, div:active, span, span:active {
   background: url('../images/cur2-sb5e2fa098e.png');
   background-size: 4.75rem 57rem;
   background-repeat: no-repeat;
@@ -57,7 +57,7 @@
   background-position: 0 0;
 }
 
-.cur2-lv2:active {
+.cur2-lv2:active, span:active {
   width: 4.75rem;
   height: 5.5rem;
   background-position: 0 -12.875rem;
@@ -120,6 +120,12 @@ div {
   width: 4.75rem;
   height: 5.5rem;
   background-position: 0 -6.4375rem;
+}
+
+span {
+  width: 4.75rem;
+  height: 5.5rem;
+  background-position: 0 -19.3125rem;
 }
 
 /*# sourceMappingURL=screen.css.map */

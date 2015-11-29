@@ -3,7 +3,7 @@ $rem-base:27px;
 $reset:true;
 $Response:true;
 @import "compass";
-@import "../_function/moblie-mixin";
+@import "moblie-mixin";
 @import "components/new-module";
 html,
 body {

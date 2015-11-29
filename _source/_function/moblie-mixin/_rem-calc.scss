@@ -7,35 +7,11 @@ $rem-base: 16px !default;
 // We use this to prevent styles from being loaded multiple times for compenents that rely on other components. 
 $modules: () !default;
 @mixin exports($name) {
-    $id: map-get($modules, $name);
-
-    @if $id==null {
-        $id: unique-id();
-        // 将该 id 整合入混合宏的 map 中
-        $modules: map-merge($modules, ($name: $id)) !global;
-        $item: null;
-        @each $key in map-keys($modules) {
-            $item: $key;
-        }
-        @if length($item)==1 {
-            // @debug $item;
-            @content;
-        }
-        @else {
-            // @content;
-        }
-    }
-    @else{
-      // @extend @content;
+    @if (index($modules, $name)==null) {
+        $modules: append($modules, $name) !global;
+        @content;
     }
 }
-
-// @mixin exports($name) {
-//     @if (index($modules, $name)==null) {
-//         $modules: append($modules, $name) !global;
-//         @content;
-//     }
-// }
 //
 // @functions
 //
