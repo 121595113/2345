@@ -7,14 +7,13 @@ div {
     @include rem-sprite($cur2, lv1, $active: true);
 }
 
-// span{
-//  @include rem-sprite($cur2,lv2,$active:true);
-// }
+span{
+ @include rem-sprite($cur2,lv2,$active:true);
+}
 
 
-@debug $modules;
 
-// @debug $lists;
+
 
 
 
