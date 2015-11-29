@@ -7,7 +7,7 @@ projectname="weather"
 projectPath="#{projectname}"
 
 http_path = "/"
-additional_import_paths＝["_source/_function"]
+additional_import_paths = ["_source/_function"]
 sass_dir = "_source/#{projectname}"
 css_dir = "#{projectPath}/css"
 images_dir = "#{projectPath}/images"

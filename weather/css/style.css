@@ -1,1 +1,1167 @@
-@charset "utf-8";@media only screen{html{font-size:12px}}@media only screen and (min-width: 321px) and (max-width: 479px){html{font-size:14px}}@media only screen and (min-width: 480px){html{font-size:18px}}html{overflow-y:scroll;-webkit-text-size-adjust:100%}html *{-webkit-tap-highlight-color:transparent;-webkit-tap-highlight-color:transparent}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}caption,th{text-align:left}fieldset,img{border:0}em,i,strong{font-style:normal}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul,ol{list-style:none}del{text-decoration:line-through}input,button,textarea,select{font-size:100%;border:none;background:none;-webkit-appearance:none}a,button,input,select,textarea,a:focus,button:focus,input:focus,select:focus,textarea:focus{outline:0 none}a{text-decoration:none;color:#666}.clearfix:before,.clearfix:after{content:"";display:table}.clearfix:after{clear:both}::-webkit-input-placeholder{color:#999}::-moz-placeholder{color:#999}:-moz-placeholder{color:#999}.wrapper{font-size:0.85714rem}body{font-family:Microsoft Yahei, sans-serif}header{position:relative;background:#0e95f3;height:2.5rem}header .title{text-align:center;line-height:2.5rem;font-size:1.14286rem;color:#fff}header .back{position:absolute;left:0;top:0;padding:0 0.85714rem;line-height:2.5rem;font-size:1.14286rem;color:#fff}header .back-icon:before{content:"";display:inline-block;width:0.57143rem;height:0.60714rem;margin-right:0.14286rem;vertical-align:5%;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoyOTZjMzZmNi1mMzU1LTM0NDEtYjc5Ny1iZDQwMmM2Y2UxN2YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RkNGNzZDQTU4RTY2MTFFNTkwMjVFMDY0RDk2MDBFQTkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RkNGNzZDQTQ4RTY2MTFFNTkwMjVFMDY0RDk2MDBFQTkiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODdiNmNhNGUtY2E5ZS0wZDQ4LWE4YWQtOGExYzIzNGM0MjYyIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6ODcxYTQ3ZTEtOGNkNS0xMWU1LWJkOWItZjVlMzdkYjhiZjhkIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+gcOkdQAAAPVJREFUeNqck80NgzAMhQPKoadKdARWgBFYAUZgBRgBRigjwAqMACPQEVq1l/aWvkgOClECTS19SJg8O/gnEEIwm70+bM8i0IAhZP4mhXdQyhfuIayISPM9frlBDhbKrMQduIB57wYZiRLNJ4UtuCkHtxQvoavmmnsg4Wye55pQVbbUvo+gtgk3ASBuKKuymYTjUYE4xJUhHs4nVhzMwWohDrf0f2vVIV6MGrgDyAeC1NSWjvwx6MFE3XBaYI6yowvuYsoANp5vkYEJCI0exIAp9iZRZk1BoQ2OmsqrmsrAYxttu5D6bGNLhdY7Fv2zzpuOfQUYAMmkdNCMP0BqAAAAAElFTkSuQmCC');background-size:0.57143rem 0.60714rem}.today-7d-detail .city-name,.today-3d-detail .city-name,.today-5d-detail .city-name,.today-10d-detail .city-name,.today-15d-detail .city-name,.today-30d-detail .city-name,.today-7d-detail .temperature,.today-3d-detail .temperature,.today-5d-detail .temperature,.today-10d-detail .temperature,.today-15d-detail .temperature,.today-30d-detail .temperature,.today-7d-detail .updated,.today-3d-detail .updated,.today-5d-detail .updated,.today-10d-detail .updated,.today-15d-detail .updated,.today-30d-detail .updated,.today-7d-detail .weather-icon,.today-3d-detail .weather-icon,.today-5d-detail .weather-icon,.today-10d-detail .weather-icon,.today-15d-detail .weather-icon,.today-30d-detail .weather-icon,.today-7d-detail .primary,.today-3d-detail .primary,.today-5d-detail .primary,.today-10d-detail .primary,.today-15d-detail .primary,.today-30d-detail .primary,.today-7d-detail .air-quality,.today-3d-detail .air-quality,.today-5d-detail .air-quality,.today-10d-detail .air-quality,.today-15d-detail .air-quality,.today-30d-detail .air-quality{position:absolute}.today-7d-detail .temperature span,.today-3d-detail .temperature span,.today-5d-detail .temperature span,.today-10d-detail .temperature span,.today-15d-detail .temperature span,.today-30d-detail .temperature span,.today-7d-detail .temperature s,.today-3d-detail .temperature s,.today-5d-detail .temperature s,.today-10d-detail .temperature s,.today-15d-detail .temperature s,.today-30d-detail .temperature s,.today-7d-detail .updated span,.today-3d-detail .updated span,.today-5d-detail .updated span,.today-10d-detail .updated span,.today-15d-detail .updated span,.today-30d-detail .updated span{color:rgba(255,255,255,0.57)}.today-7d-detail,.today-3d-detail,.today-5d-detail,.today-10d-detail,.today-15d-detail,.today-30d-detail{position:relative;height:12.78571rem;background:#21a4ff;color:#fff}.today-7d-detail .city-name,.today-3d-detail .city-name,.today-5d-detail .city-name,.today-10d-detail .city-name,.today-15d-detail .city-name,.today-30d-detail .city-name{font-size:1.5rem}.today-7d-detail .city-name a,.today-3d-detail .city-name a,.today-5d-detail .city-name a,.today-10d-detail .city-name a,.today-15d-detail .city-name a,.today-30d-detail .city-name a{color:inherit;text-decoration:inherit;cursor:inherit}.today-7d-detail .city-name a:active,.today-3d-detail .city-name a:active,.today-5d-detail .city-name a:active,.today-10d-detail .city-name a:active,.today-15d-detail .city-name a:active,.today-30d-detail .city-name a:active,.today-7d-detail .city-name a:focus,.today-3d-detail .city-name a:focus,.today-5d-detail .city-name a:focus,.today-10d-detail .city-name a:focus,.today-15d-detail .city-name a:focus,.today-30d-detail .city-name a:focus{outline:none}.today-7d-detail .city-name b,.today-3d-detail .city-name b,.today-5d-detail .city-name b,.today-10d-detail .city-name b,.today-15d-detail .city-name b,.today-30d-detail .city-name b{font-weight:normal;font-size:1.14286rem;color:rgba(255,255,255,0.57)}.today-7d-detail .temperature,.today-3d-detail .temperature,.today-5d-detail .temperature,.today-10d-detail .temperature,.today-15d-detail .temperature,.today-30d-detail .temperature{font-size:3.21429rem}.today-7d-detail .temperature span,.today-3d-detail .temperature span,.today-5d-detail .temperature span,.today-10d-detail .temperature span,.today-15d-detail .temperature span,.today-30d-detail .temperature span{display:inline-block;vertical-align:text-top;margin-top:0.71429rem;font-size:1.78571rem}.today-7d-detail .temperature s,.today-3d-detail .temperature s,.today-5d-detail .temperature s,.today-10d-detail .temperature s,.today-15d-detail .temperature s,.today-30d-detail .temperature s{display:inline-block;vertical-align:text-top;line-height:1;margin-top:1.42857rem;text-decoration:none;font-size:1.42857rem}.today-7d-detail .updated,.today-3d-detail .updated,.today-5d-detail .updated,.today-10d-detail .updated,.today-15d-detail .updated,.today-30d-detail .updated{font-size:1.21429rem}.today-7d-detail .weather-icon,.today-3d-detail .weather-icon,.today-5d-detail .weather-icon,.today-10d-detail .weather-icon,.today-15d-detail .weather-icon,.today-30d-detail .weather-icon{text-align:right}.today-7d-detail .weather-icon span,.today-3d-detail .weather-icon span,.today-5d-detail .weather-icon span,.today-10d-detail .weather-icon span,.today-15d-detail .weather-icon span,.today-30d-detail .weather-icon span{display:inline-block}.today-7d-detail .phrase,.today-3d-detail .phrase,.today-5d-detail .phrase,.today-10d-detail .phrase,.today-15d-detail .phrase,.today-30d-detail .phrase{font-size:1.5rem}.today-7d-detail .primary,.today-3d-detail .primary,.today-5d-detail .primary,.today-10d-detail .primary,.today-15d-detail .primary,.today-30d-detail .primary{margin-right:auto;font-size:1.14286rem}.today-7d-detail .air-quality,.today-3d-detail .air-quality,.today-5d-detail .air-quality,.today-10d-detail .air-quality,.today-15d-detail .air-quality,.today-30d-detail .air-quality{text-align:right;font-size:1.14286rem}.today-7d-detail .air-quality [class*=aqi],.today-3d-detail .air-quality [class*=aqi],.today-5d-detail .air-quality [class*=aqi],.today-10d-detail .air-quality [class*=aqi],.today-15d-detail .air-quality [class*=aqi],.today-30d-detail .air-quality [class*=aqi]{display:inline-block;margin-right:0.53571rem;vertical-align:-13%}.today-7d-detail .air-quality .number:before,.today-3d-detail .air-quality .number:before,.today-5d-detail .air-quality .number:before,.today-10d-detail .air-quality .number:before,.today-15d-detail .air-quality .number:before,.today-30d-detail .air-quality .number:before{content:"|";display:inline-block;font-size:.8em;vertical-align:5%;color:#74bff3;margin:0 0.35714rem 0 0.53571rem}.today-7d-detail .city-name,.today-7d-detail .temperature,.today-7d-detail .updated,.today-7d-detail .primary,.today-3d-detail .temperature,.today-3d-detail .updated,.today-3d-detail .primary,.today-5d-detail .temperature,.today-5d-detail .updated,.today-5d-detail .primary,.today-10d-detail .temperature,.today-10d-detail .updated,.today-10d-detail .primary,.today-15d-detail .city-name,.today-15d-detail .temperature,.today-15d-detail .air-quality,.today-30d-detail .city-name,.today-30d-detail .temperature,.today-30d-detail .air-quality{left:1.14286rem}.today-7d-detail .weather-icon,.today-7d-detail .air-quality,.today-3d-detail .city-name,.today-3d-detail .weather-icon,.today-3d-detail .air-quality,.today-5d-detail .city-name,.today-5d-detail .weather-icon,.today-5d-detail .air-quality,.today-10d-detail .weather-icon,.today-10d-detail .air-quality,.today-15d-detail .updated,.today-15d-detail .weather-icon,.today-15d-detail .primary,.today-30d-detail .updated,.today-30d-detail .weather-icon,.today-30d-detail .primary{right:1.32143rem}.today-7d-detail .city-name{top:1.42857rem}.today-7d-detail .temperature{top:3.57143rem}.today-7d-detail .updated{top:7.39286rem}.today-7d-detail .weather-icon{top:3.57143rem}.today-7d-detail .primary{top:9.64286rem}.today-7d-detail .air-quality{top:9.64286rem}.today-3d-detail{height:11.42857rem}.today-3d-detail .city-name{top:1.42857rem}.today-3d-detail .temperature{top:1.07143rem}.today-3d-detail .updated{top:5.71429rem}.today-3d-detail .weather-icon{top:3.57143rem}.today-3d-detail .primary{top:7.85714rem}.today-3d-detail .air-quality{display:none;top:8.21429rem}.today-5d-detail{height:11.42857rem}.today-5d-detail .city-name{top:1.25rem}.today-5d-detail .temperature{top:0.71429rem}.today-5d-detail .updated{top:5.71429rem}.today-5d-detail .weather-icon{top:3.92857rem}.today-5d-detail .primary{top:8.21429rem}.today-5d-detail .air-quality{display:none;top:8.92857rem}.today-10d-detail .city-name{top:1.42857rem;left:0;right:0;text-align:center}.today-10d-detail .temperature{top:3.21429rem}.today-10d-detail .updated{top:7.5rem}.today-10d-detail .weather-icon{top:4.82143rem}.today-10d-detail .primary{top:9.64286rem}.today-10d-detail .air-quality{display:none;top:9.64286rem}.today-15d-detail .city-name{top:1.42857rem}.today-15d-detail .temperature{top:4.10714rem}.today-15d-detail .updated{top:1.42857rem}.today-15d-detail .weather-icon{top:3.71429rem}.today-15d-detail .primary{top:9.82143rem}.today-15d-detail .air-quality{top:9.82143rem}.today-30d-detail .city-name{top:1.42857rem}.today-30d-detail .temperature{top:4.10714rem}.today-30d-detail .updated{top:1.42857rem}.today-30d-detail .weather-icon{top:3.71429rem}.today-30d-detail .primary{top:9.82143rem}.today-30d-detail .air-quality{top:9.82143rem}.wealist{display:table;width:100%;border-collapse:collapse;font-size:1.14286rem}.wealist li{line-height:3.03571rem;display:table-row;display:-webkit-flex;display:flex;border-bottom:1px solid #f0f3f5}.wealist li:last-child{border:none}.wealist li .date,.wealist li .phrase{white-space:nowrap}.wealist li>div{display:table-cell}.wealist li .date{-webkit-flex:0 1 33%;flex:0 1 33%;padding-left:1.07143rem;color:#999}.wealist li .date span{color:#666}.wealist li .phrase{-webkit-flex:1 1 30%;flex:1 1 30%;margin:0 auto;text-align:left;color:#666}.wealist li .phrase span{display:inline-block;margin-right:0.53571rem;vertical-align:-10%}.wealist li .temperature{padding-right:1.5rem;text-align:right;color:#c1c1c1}.wealist li .temperature .low{color:#0e95f3}.wealist li .temperature .high{color:#ff8814}.wealist li.today .date span,.wealist li.tomorrow .date span,.wealist li.today .phrase,.wealist li.tomorrow .phrase{color:#333}.wealist li.rest-day .date span{color:#0e95f3}section.today-life-index .btitle,section.aqi-pm .btitle,section.hot-city .btitle,section.nearby-city .btitle{padding:0 1rem;line-height:2.71429rem;font-size:1.14286rem;color:#333;background:#ebf6ff}section.today-life-index .btitle:before,section.aqi-pm .btitle:before,section.hot-city .btitle:before,section.nearby-city .btitle:before{content:"";display:inline-block;width:0.21429rem;height:1.21429rem;margin-right:0.35714rem;vertical-align:-8%;background:#3c9df9}section.city-list .btitle,section.town-list .btitle,section.select-list .btitle,section.select-city .btitle{margin-top:1.14286rem;font-size:1.14286rem;text-align:center;color:#333}section.today-life-index .bmeta dt{display:table;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;width:100%;box-sizing:border-box;padding:1.42857rem 0 0.71429rem 1.96429rem}section.today-life-index .bmeta dt div{display:table-cell;vertical-align:middle;width:2.28571rem}section.today-life-index .bmeta dt img{width:2.35714rem;height:2.35714rem}section.today-life-index .bmeta dt p{display:table-cell;vertical-align:middle;padding-left:1.07143rem;font-size:1.07143rem;line-height:1.78571rem}section.today-life-index .bmeta dd{display:table;display:-webkit-flex;display:flex;width:100%;border-collapse:collapse;border-top:1px solid #e5e5e5}section.today-life-index .bmeta dd div{display:table-cell;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;width:50%;padding:0.85714rem 0 0.85714rem 1.78571rem}section.today-life-index .bmeta dd span{display:inline-block;vertical-align:middle;margin-right:1.07143rem;-webkit-flex:0 0 2.07143rem;flex:0 0 2.07143rem}section.today-life-index .bmeta dd p{display:inline-block;vertical-align:middle;font-size:1.07143rem}.progress{width:23.5rem;height:2.28571rem;margin:0 auto 3.21429rem;background:url("http://waptianqi.2345.com/images/aqi-detail-140710@720.png") no-repeat;background-size:23.5rem 2.28571rem}.progress .scale{position:relative;height:2.28571rem;margin:0 1.46429rem 0 0.5rem}.progress .cur{position:absolute;top:2.30357rem;width:2.53571rem;height:2.96429rem;margin-left:-1.26786rem;text-align:center;line-height:3.21429rem;color:#fff;font-size:0.89286rem}.aqi-pm-lv1 .phrase{color:#6c0}.aqi-pm-lv1 .progress .cur{background:url(http://waptianqi.2345.com/images/aqi-detail-cur150923@720/lv1.png) no-repeat;background-size:100% 100%}.aqi-pm-lv2 .phrase{color:#fbd12a}.aqi-pm-lv2 .progress .cur{background:url(http://waptianqi.2345.com/images/aqi-detail-cur150923@720/lv2.png) no-repeat;background-size:100% 100%}.aqi-pm-lv3 .phrase{color:#ffa641}.aqi-pm-lv3 .progress .cur{background:url(http://waptianqi.2345.com/images/aqi-detail-cur150923@720/lv3.png) no-repeat;background-size:100% 100%}.aqi-pm-lv4 .phrase{color:#fe0000}.aqi-pm-lv4 .progress .cur{background:url(http://waptianqi.2345.com/images/aqi-detail-cur150923@720/lv4.png) no-repeat;background-size:100% 100%}.aqi-pm-lv5 .phrase{color:#cc0001}.aqi-pm-lv5 .progress .cur{background:url(http://waptianqi.2345.com/images/aqi-detail-cur150923@720/lv5.png) no-repeat;background-size:100% 100%}.aqi-pm-lv6 .phrase{color:#970454}.aqi-pm-lv6 .progress .cur{background:url(http://waptianqi.2345.com/images/aqi-detail-cur150923@720/lv6.png) no-repeat;background-size:100% 100%}.aqi-pm-lv7 .phrase{color:#62001e}.aqi-pm-lv7 .progress .cur{background:url(http://waptianqi.2345.com/images/aqi-detail-cur150923@720/lv7.png) no-repeat;background-size:100% 100%}section.aqi-pm .aqi_container{padding:2.03571rem 0 1.42857rem;overflow:hidden}section.aqi-pm .aqi_container h3{text-align:center;font-size:1.28571rem;margin-bottom:2.07143rem}section.hot-city .bmeta table,section.nearby-city .bmeta table,section.city-list table,section.town-list table,section.select-list table{width:100%;border-collapse:collapse;border:1px solid #e5e5e5;text-align:center}section.hot-city .bmeta td,section.nearby-city .bmeta td,section.city-list td,section.town-list td,section.select-list td{padding:0.89286rem;font-size:1rem}section.hot-city .bmeta,section.nearby-city .bmeta{margin:0.60714rem 1rem}section.hot-city .bmeta table td,section.nearby-city .bmeta table td{width:50%}section.nearby-city{padding-bottom:1.42857rem}section.city-list .bmeta,section.town-list .bmeta,section.select-list .bmeta{margin:0.85714rem 1rem}section.city-list .bmeta a,section.town-list .bmeta a,section.select-list .bmeta a{color:#666}section.city-list table td{width:33.33333%}section.city-list a:active{color:#268dea}section.town-list table td{width:33.33333%}section.town-list a:active{color:#268dea}section.select-list table td{width:20%}section.select-list td{padding:0.89286rem 0.71429rem}section.select-list a:active{color:#268dea}section.select-city .bmeta{margin-top:0.85714rem;padding:0 0.96429rem 0 0.82143rem;border-top:1px solid #e5e5e5}section.select-city .bmeta dt{float:left;width:1.42857rem;height:1.42857rem;margin-left:0.32143rem;margin-top:1.03571rem;line-height:1.42857rem;border:1px solid #e5e5e5;border-radius:0.17857rem;font-size:1.07143rem;text-align:center;background:#f2f2f2;color:#268dea}section.select-city .bmeta dd{padding-top:1.03571rem;padding-left:1.96429rem;border-bottom:1px solid #e5e5e5}section.select-city .bmeta dd:last-of-type{border:none}section.select-city .bmeta dd a{display:inline-block;margin:0 0.53571rem 1.14286rem 1.07143rem;line-height:1.42857rem;font-size:1.14286rem}section.select-city .bmeta dd a:active,section.select-city .bmeta dd a.active{color:#268dea}.wl-10,.wl-11,.wl-12,.wl-13,.wl-14,.wl-16,.wl-17,.wl-19,.wl-20,.wl-26,.wl-28,.wl-28_net,.wl-32,.wl-32_net,.wl-37,.wl-39,.wl-39_net,.wl-40,.wl-41,.wl-41_net,.wl-42,.wl-60,.wl-61,.wl-62,.wl-63,.wl-64,.wl-65,.wl-65_net{background:url('../images/wl-s41c053a28a.png');background-size:3.57143rem 103.85714rem;background-repeat:no-repeat}.wl-10{width:3.57143rem;height:3.57143rem;background-position:0 0}.wl-11{width:3.57143rem;height:3.57143rem;background-position:0 -3.71429rem}.wl-12{width:3.57143rem;height:3.57143rem;background-position:0 -7.42857rem}.wl-13{width:3.57143rem;height:3.57143rem;background-position:0 -11.14286rem}.wl-14{width:3.57143rem;height:3.57143rem;background-position:0 -14.85714rem}.wl-16{width:3.57143rem;height:3.57143rem;background-position:0 -18.57143rem}.wl-17{width:3.57143rem;height:3.57143rem;background-position:0 -22.28571rem}.wl-19{width:3.57143rem;height:3.57143rem;background-position:0 -26rem}.wl-20{width:3.57143rem;height:3.57143rem;background-position:0 -29.71429rem}.wl-26{width:3.57143rem;height:3.57143rem;background-position:0 -33.42857rem}.wl-28{width:3.57143rem;height:3.57143rem;background-position:0 -37.14286rem}.wl-28_net{width:3.57143rem;height:3.57143rem;background-position:0 -40.85714rem}.wl-32{width:3.57143rem;height:3.57143rem;background-position:0 -44.57143rem}.wl-32_net{width:3.57143rem;height:3.57143rem;background-position:0 -48.28571rem}.wl-37{width:3.57143rem;height:3.57143rem;background-position:0 -52rem}.wl-39{width:3.57143rem;height:3.57143rem;background-position:0 -55.71429rem}.wl-39_net{width:3.57143rem;height:3.57143rem;background-position:0 -59.42857rem}.wl-40{width:3.57143rem;height:3.57143rem;background-position:0 -63.14286rem}.wl-41{width:3.57143rem;height:3.57143rem;background-position:0 -66.85714rem}.wl-41_net{width:3.57143rem;height:3.57143rem;background-position:0 -70.57143rem}.wl-42{width:3.57143rem;height:3.57143rem;background-position:0 -74.28571rem}.wl-60{width:3.57143rem;height:3.57143rem;background-position:0 -78rem}.wl-61{width:3.57143rem;height:3.57143rem;background-position:0 -81.71429rem}.wl-62{width:3.57143rem;height:3.57143rem;background-position:0 -85.42857rem}.wl-63{width:3.57143rem;height:3.57143rem;background-position:0 -89.14286rem}.wl-64{width:3.57143rem;height:3.57143rem;background-position:0 -92.85714rem}.wl-65{width:3.57143rem;height:3.57143rem;background-position:0 -96.57143rem}.wl-65_net{width:3.57143rem;height:3.57143rem;background-position:0 -100.28571rem}.ws-10,.ws-11,.ws-12,.ws-13,.ws-14,.ws-16,.ws-19,.ws-20,.ws-20_net,.ws-26,.ws-28,.ws-28_net,.ws-32,.ws-32_net,.ws-37_net,.ws-39,.ws-39_net,.ws-40,.ws-41,.ws-41_net,.ws-42,.ws-60,.ws-61,.ws-62,.ws-63,.ws-64,.ws-65,.ws-65_net{background:url('../images/ws-sd75e63225e.png');background-size:1.85714rem 55.85714rem;background-repeat:no-repeat}.ws-10{width:1.85714rem;height:1.85714rem;background-position:0 0}.ws-11{width:1.85714rem;height:1.85714rem;background-position:0 -2rem}.ws-12{width:1.85714rem;height:1.85714rem;background-position:0 -4rem}.ws-13{width:1.85714rem;height:1.85714rem;background-position:0 -6rem}.ws-14{width:1.85714rem;height:1.85714rem;background-position:0 -8rem}.ws-16{width:1.85714rem;height:1.85714rem;background-position:0 -10rem}.ws-19{width:1.85714rem;height:1.85714rem;background-position:0 -12rem}.ws-20{width:1.85714rem;height:1.85714rem;background-position:0 -14rem}.ws-20_net{width:1.85714rem;height:1.85714rem;background-position:0 -16rem}.ws-26{width:1.85714rem;height:1.85714rem;background-position:0 -18rem}.ws-28{width:1.85714rem;height:1.85714rem;background-position:0 -20rem}.ws-28_net{width:1.85714rem;height:1.85714rem;background-position:0 -22rem}.ws-32{width:1.85714rem;height:1.85714rem;background-position:0 -24rem}.ws-32_net{width:1.85714rem;height:1.85714rem;background-position:0 -26rem}.ws-37_net{width:1.85714rem;height:1.85714rem;background-position:0 -28rem}.ws-39{width:1.85714rem;height:1.85714rem;background-position:0 -30rem}.ws-39_net{width:1.85714rem;height:1.85714rem;background-position:0 -32rem}.ws-40{width:1.85714rem;height:1.85714rem;background-position:0 -34rem}.ws-41{width:1.85714rem;height:1.85714rem;background-position:0 -36rem}.ws-41_net{width:1.85714rem;height:1.85714rem;background-position:0 -38rem}.ws-42{width:1.85714rem;height:1.85714rem;background-position:0 -40rem}.ws-60{width:1.85714rem;height:1.85714rem;background-position:0 -42rem}.ws-61{width:1.85714rem;height:1.85714rem;background-position:0 -44rem}.ws-62{width:1.85714rem;height:1.85714rem;background-position:0 -46rem}.ws-63{width:1.85714rem;height:1.85714rem;background-position:0 -48rem}.ws-64{width:1.85714rem;height:1.85714rem;background-position:0 -50rem}.ws-65{width:1.85714rem;height:1.85714rem;background-position:0 -52rem}.ws-65_net{width:1.85714rem;height:1.85714rem;background-position:0 -54rem}.aqi-icon-lv1,.aqi-icon-lv2,.aqi-icon-lv3,.aqi-icon-lv4,.aqi-icon-lv5,.aqi-icon-lv6,.aqi-icon-lv7{background:url('../images/aqi-icon-s42d071a127.png');background-size:1.14286rem 8.85714rem;background-repeat:no-repeat}.aqi-icon-lv1{width:1.14286rem;height:1.14286rem;background-position:0 0}.aqi-icon-lv2{width:1.14286rem;height:1.14286rem;background-position:0 -1.28571rem}.aqi-icon-lv3{width:1.14286rem;height:1.14286rem;background-position:0 -2.57143rem}.aqi-icon-lv4{width:1.14286rem;height:1.14286rem;background-position:0 -3.85714rem}.aqi-icon-lv5{width:1.14286rem;height:1.14286rem;background-position:0 -5.14286rem}.aqi-icon-lv6{width:1.14286rem;height:1.14286rem;background-position:0 -6.42857rem}.aqi-icon-lv7{width:1.14286rem;height:1.14286rem;background-position:0 -7.71429rem}.life-carwash1,.life-carwash2,.life-cold1,.life-cold2,.life-dressed1,.life-dressed2,.life-driving1,.life-driving2,.life-fishing1,.life-fishing2,.life-moring1,.life-moring2,.life-rain1,.life-rain2,.life-sun1,.life-sun2{background:url('../images/life-saba59cf241.png');background-size:2.07143rem 35.28571rem;background-repeat:no-repeat}.life-carwash1{width:2.07143rem;height:2.07143rem;background-position:0 0}.life-carwash2{width:2.07143rem;height:2.07143rem;background-position:0 -2.21429rem}.life-cold1{width:2.07143rem;height:2.07143rem;background-position:0 -4.42857rem}.life-cold2{width:2.07143rem;height:2.07143rem;background-position:0 -6.64286rem}.life-dressed1{width:2.07143rem;height:2.07143rem;background-position:0 -8.85714rem}.life-dressed2{width:2.07143rem;height:2.07143rem;background-position:0 -11.07143rem}.life-driving1{width:2.07143rem;height:2.07143rem;background-position:0 -13.28571rem}.life-driving2{width:2.07143rem;height:2.07143rem;background-position:0 -15.5rem}.life-fishing1{width:2.07143rem;height:2.07143rem;background-position:0 -17.71429rem}.life-fishing2{width:2.07143rem;height:2.07143rem;background-position:0 -19.92857rem}.life-moring1{width:2.07143rem;height:2.07143rem;background-position:0 -22.14286rem}.life-moring2{width:2.07143rem;height:2.07143rem;background-position:0 -24.35714rem}.life-rain1{width:2.07143rem;height:2.07143rem;background-position:0 -26.57143rem}.life-rain2{width:2.07143rem;height:2.07143rem;background-position:0 -28.78571rem}.life-sun1{width:2.07143rem;height:2.07143rem;background-position:0 -31rem}.life-sun2{width:2.07143rem;height:2.07143rem;background-position:0 -33.21429rem}
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+}
+html * {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  font-family: sans-serif;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th {
+  text-align: left;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+em, i, strong {
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+input, button, textarea, select {
+  font-size: 100%;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+}
+
+a, button, input, select, textarea, a:focus, button:focus, input:focus, select:focus, textarea:focus {
+  outline: 0 none;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+::-webkit-input-placeholder {
+  color: #999;
+}
+
+::-moz-placeholder {
+  color: #999;
+}
+
+:-moz-placeholder {
+  color: #999;
+}
+
+@media only screen {
+  html {
+    font-size: 12;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 479px) {
+  html {
+    font-size: 14;
+  }
+}
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 18;
+  }
+}
+.wrapper {
+  font-size: 0.88889rem;
+}
+
+body {
+  font-family: Microsoft Yahei, sans-serif;
+}
+
+header {
+  position: relative;
+  background: #0e95f3;
+  height: 2.59259rem;
+}
+header .title {
+  text-align: center;
+  line-height: 2.59259rem;
+  font-size: 1.18519rem;
+  color: #fff;
+}
+header .back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0 0.88889rem;
+  line-height: 2.59259rem;
+  font-size: 1.18519rem;
+  color: #fff;
+}
+header .back-icon:before {
+  content: "";
+  display: inline-block;
+  width: 0.59259rem;
+  height: 0.62963rem;
+  margin-right: 0.14815rem;
+  vertical-align: 5%;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoyOTZjMzZmNi1mMzU1LTM0NDEtYjc5Ny1iZDQwMmM2Y2UxN2YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RkNGNzZDQTU4RTY2MTFFNTkwMjVFMDY0RDk2MDBFQTkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RkNGNzZDQTQ4RTY2MTFFNTkwMjVFMDY0RDk2MDBFQTkiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODdiNmNhNGUtY2E5ZS0wZDQ4LWE4YWQtOGExYzIzNGM0MjYyIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6ODcxYTQ3ZTEtOGNkNS0xMWU1LWJkOWItZjVlMzdkYjhiZjhkIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+gcOkdQAAAPVJREFUeNqck80NgzAMhQPKoadKdARWgBFYAUZgBRgBRigjwAqMACPQEVq1l/aWvkgOClECTS19SJg8O/gnEEIwm70+bM8i0IAhZP4mhXdQyhfuIayISPM9frlBDhbKrMQduIB57wYZiRLNJ4UtuCkHtxQvoavmmnsg4Wye55pQVbbUvo+gtgk3ASBuKKuymYTjUYE4xJUhHs4nVhzMwWohDrf0f2vVIV6MGrgDyAeC1NSWjvwx6MFE3XBaYI6yowvuYsoANp5vkYEJCI0exIAp9iZRZk1BoQ2OmsqrmsrAYxttu5D6bGNLhdY7Fv2zzpuOfQUYAMmkdNCMP0BqAAAAAElFTkSuQmCC');
+  background-size: 0.59259rem 0.62963rem;
+}
+
+.today-7d-detail .city-name, .today-3d-detail .city-name, .today-5d-detail .city-name, .today-10d-detail .city-name, .today-15d-detail .city-name, .today-30d-detail .city-name, .today-7d-detail .temperature, .today-3d-detail .temperature, .today-5d-detail .temperature, .today-10d-detail .temperature, .today-15d-detail .temperature, .today-30d-detail .temperature, .today-7d-detail .updated, .today-3d-detail .updated, .today-5d-detail .updated, .today-10d-detail .updated, .today-15d-detail .updated, .today-30d-detail .updated, .today-7d-detail .weather-icon, .today-3d-detail .weather-icon, .today-5d-detail .weather-icon, .today-10d-detail .weather-icon, .today-15d-detail .weather-icon, .today-30d-detail .weather-icon, .today-7d-detail .primary, .today-3d-detail .primary, .today-5d-detail .primary, .today-10d-detail .primary, .today-15d-detail .primary, .today-30d-detail .primary, .today-7d-detail .air-quality, .today-3d-detail .air-quality, .today-5d-detail .air-quality, .today-10d-detail .air-quality, .today-15d-detail .air-quality, .today-30d-detail .air-quality {
+  position: absolute;
+}
+
+.today-7d-detail .temperature span, .today-3d-detail .temperature span, .today-5d-detail .temperature span, .today-10d-detail .temperature span, .today-15d-detail .temperature span, .today-30d-detail .temperature span, .today-7d-detail .temperature s, .today-3d-detail .temperature s, .today-5d-detail .temperature s, .today-10d-detail .temperature s, .today-15d-detail .temperature s, .today-30d-detail .temperature s, .today-7d-detail .updated span, .today-3d-detail .updated span, .today-5d-detail .updated span, .today-10d-detail .updated span, .today-15d-detail .updated span, .today-30d-detail .updated span {
+  color: rgba(255, 255, 255, 0.57);
+}
+
+.today-7d-detail, .today-3d-detail, .today-5d-detail, .today-10d-detail, .today-15d-detail, .today-30d-detail {
+  position: relative;
+  height: 13.25926rem;
+  background: #21a4ff;
+  color: #fff;
+}
+.today-7d-detail .city-name, .today-3d-detail .city-name, .today-5d-detail .city-name, .today-10d-detail .city-name, .today-15d-detail .city-name, .today-30d-detail .city-name {
+  font-size: 1.55556rem;
+}
+.today-7d-detail .city-name a, .today-3d-detail .city-name a, .today-5d-detail .city-name a, .today-10d-detail .city-name a, .today-15d-detail .city-name a, .today-30d-detail .city-name a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+}
+.today-7d-detail .city-name a:active, .today-3d-detail .city-name a:active, .today-5d-detail .city-name a:active, .today-10d-detail .city-name a:active, .today-15d-detail .city-name a:active, .today-30d-detail .city-name a:active, .today-7d-detail .city-name a:focus, .today-3d-detail .city-name a:focus, .today-5d-detail .city-name a:focus, .today-10d-detail .city-name a:focus, .today-15d-detail .city-name a:focus, .today-30d-detail .city-name a:focus {
+  outline: none;
+}
+.today-7d-detail .city-name b, .today-3d-detail .city-name b, .today-5d-detail .city-name b, .today-10d-detail .city-name b, .today-15d-detail .city-name b, .today-30d-detail .city-name b {
+  font-weight: normal;
+  font-size: 1.18519rem;
+  color: rgba(255, 255, 255, 0.57);
+}
+.today-7d-detail .temperature, .today-3d-detail .temperature, .today-5d-detail .temperature, .today-10d-detail .temperature, .today-15d-detail .temperature, .today-30d-detail .temperature {
+  font-size: 3.33333rem;
+}
+.today-7d-detail .temperature span, .today-3d-detail .temperature span, .today-5d-detail .temperature span, .today-10d-detail .temperature span, .today-15d-detail .temperature span, .today-30d-detail .temperature span {
+  display: inline-block;
+  vertical-align: text-top;
+  margin-top: 0.74074rem;
+  font-size: 1.85185rem;
+}
+.today-7d-detail .temperature s, .today-3d-detail .temperature s, .today-5d-detail .temperature s, .today-10d-detail .temperature s, .today-15d-detail .temperature s, .today-30d-detail .temperature s {
+  display: inline-block;
+  vertical-align: text-top;
+  line-height: 1;
+  margin-top: 1.48148rem;
+  text-decoration: none;
+  font-size: 1.48148rem;
+}
+.today-7d-detail .updated, .today-3d-detail .updated, .today-5d-detail .updated, .today-10d-detail .updated, .today-15d-detail .updated, .today-30d-detail .updated {
+  font-size: 1.25926rem;
+}
+.today-7d-detail .weather-icon, .today-3d-detail .weather-icon, .today-5d-detail .weather-icon, .today-10d-detail .weather-icon, .today-15d-detail .weather-icon, .today-30d-detail .weather-icon {
+  text-align: right;
+}
+.today-7d-detail .weather-icon span, .today-3d-detail .weather-icon span, .today-5d-detail .weather-icon span, .today-10d-detail .weather-icon span, .today-15d-detail .weather-icon span, .today-30d-detail .weather-icon span {
+  display: inline-block;
+}
+.today-7d-detail .phrase, .today-3d-detail .phrase, .today-5d-detail .phrase, .today-10d-detail .phrase, .today-15d-detail .phrase, .today-30d-detail .phrase {
+  font-size: 1.55556rem;
+}
+.today-7d-detail .primary, .today-3d-detail .primary, .today-5d-detail .primary, .today-10d-detail .primary, .today-15d-detail .primary, .today-30d-detail .primary {
+  margin-right: auto;
+  font-size: 1.18519rem;
+}
+.today-7d-detail .air-quality, .today-3d-detail .air-quality, .today-5d-detail .air-quality, .today-10d-detail .air-quality, .today-15d-detail .air-quality, .today-30d-detail .air-quality {
+  text-align: right;
+  font-size: 1.18519rem;
+}
+.today-7d-detail .air-quality [class*=aqi], .today-3d-detail .air-quality [class*=aqi], .today-5d-detail .air-quality [class*=aqi], .today-10d-detail .air-quality [class*=aqi], .today-15d-detail .air-quality [class*=aqi], .today-30d-detail .air-quality [class*=aqi] {
+  display: inline-block;
+  margin-right: 0.55556rem;
+  vertical-align: -13%;
+}
+.today-7d-detail .air-quality .number:before, .today-3d-detail .air-quality .number:before, .today-5d-detail .air-quality .number:before, .today-10d-detail .air-quality .number:before, .today-15d-detail .air-quality .number:before, .today-30d-detail .air-quality .number:before {
+  content: "|";
+  display: inline-block;
+  font-size: .8em;
+  vertical-align: 5%;
+  color: #74bff3;
+  margin: 0 0.37037rem 0 0.55556rem;
+}
+
+.today-7d-detail .city-name, .today-7d-detail .temperature, .today-7d-detail .updated, .today-7d-detail .primary, .today-3d-detail .temperature, .today-3d-detail .updated, .today-3d-detail .primary, .today-5d-detail .temperature, .today-5d-detail .updated, .today-5d-detail .primary, .today-10d-detail .temperature, .today-10d-detail .updated, .today-10d-detail .primary, .today-15d-detail .city-name, .today-15d-detail .temperature, .today-15d-detail .air-quality, .today-30d-detail .city-name, .today-30d-detail .temperature, .today-30d-detail .air-quality {
+  left: 1.18519rem;
+}
+
+.today-7d-detail .weather-icon, .today-7d-detail .air-quality, .today-3d-detail .city-name, .today-3d-detail .weather-icon, .today-3d-detail .air-quality, .today-5d-detail .city-name, .today-5d-detail .weather-icon, .today-5d-detail .air-quality, .today-10d-detail .weather-icon, .today-10d-detail .air-quality, .today-15d-detail .updated, .today-15d-detail .weather-icon, .today-15d-detail .primary, .today-30d-detail .updated, .today-30d-detail .weather-icon, .today-30d-detail .primary {
+  right: 1.37037rem;
+}
+
+.today-7d-detail .city-name {
+  top: 1.48148rem;
+}
+.today-7d-detail .temperature {
+  top: 3.7037rem;
+}
+.today-7d-detail .updated {
+  top: 7.66667rem;
+}
+.today-7d-detail .weather-icon {
+  top: 3.7037rem;
+}
+.today-7d-detail .primary {
+  top: 10rem;
+}
+.today-7d-detail .air-quality {
+  top: 10rem;
+}
+
+.today-3d-detail {
+  height: 11.85185rem;
+}
+.today-3d-detail .city-name {
+  top: 1.48148rem;
+}
+.today-3d-detail .temperature {
+  top: 1.11111rem;
+}
+.today-3d-detail .updated {
+  top: 5.92593rem;
+}
+.today-3d-detail .weather-icon {
+  top: 3.7037rem;
+}
+.today-3d-detail .primary {
+  top: 8.14815rem;
+}
+.today-3d-detail .air-quality {
+  display: none;
+  top: 8.51852rem;
+}
+
+.today-5d-detail {
+  height: 11.85185rem;
+}
+.today-5d-detail .city-name {
+  top: 1.2963rem;
+}
+.today-5d-detail .temperature {
+  top: 0.74074rem;
+}
+.today-5d-detail .updated {
+  top: 5.92593rem;
+}
+.today-5d-detail .weather-icon {
+  top: 4.07407rem;
+}
+.today-5d-detail .primary {
+  top: 8.51852rem;
+}
+.today-5d-detail .air-quality {
+  display: none;
+  top: 9.25926rem;
+}
+
+.today-10d-detail .city-name {
+  top: 1.48148rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.today-10d-detail .temperature {
+  top: 3.33333rem;
+}
+.today-10d-detail .updated {
+  top: 7.77778rem;
+}
+.today-10d-detail .weather-icon {
+  top: 5rem;
+}
+.today-10d-detail .primary {
+  top: 10rem;
+}
+.today-10d-detail .air-quality {
+  display: none;
+  top: 10rem;
+}
+
+.today-15d-detail .city-name {
+  top: 1.48148rem;
+}
+.today-15d-detail .temperature {
+  top: 4.25926rem;
+}
+.today-15d-detail .updated {
+  top: 1.48148rem;
+}
+.today-15d-detail .weather-icon {
+  top: 3.85185rem;
+}
+.today-15d-detail .primary {
+  top: 10.18519rem;
+}
+.today-15d-detail .air-quality {
+  top: 10.18519rem;
+}
+
+.today-30d-detail .city-name {
+  top: 1.48148rem;
+}
+.today-30d-detail .temperature {
+  top: 4.25926rem;
+}
+.today-30d-detail .updated {
+  top: 1.48148rem;
+}
+.today-30d-detail .weather-icon {
+  top: 3.85185rem;
+}
+.today-30d-detail .primary {
+  top: 10.18519rem;
+}
+.today-30d-detail .air-quality {
+  top: 10.18519rem;
+}
+
+.wealist {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.18519rem;
+}
+.wealist li {
+  line-height: 3.14815rem;
+  display: table-row;
+  display: -webkit-flex;
+  display: flex;
+  border-bottom: 1px solid #f0f3f5;
+}
+.wealist li:last-child {
+  border: none;
+}
+.wealist li .date, .wealist li .phrase {
+  white-space: nowrap;
+}
+.wealist li > div {
+  display: table-cell;
+}
+.wealist li .date {
+  -webkit-flex: 0 1 33%;
+  flex: 0 1 33%;
+  padding-left: 1.11111rem;
+  color: #999;
+}
+.wealist li .date span {
+  color: #666;
+}
+.wealist li .phrase {
+  -webkit-flex: 1 1 30%;
+  flex: 1 1 30%;
+  margin: 0 auto;
+  text-align: left;
+  color: #666;
+}
+.wealist li .phrase span {
+  display: inline-block;
+  margin-right: 0.55556rem;
+  vertical-align: -10%;
+}
+.wealist li .temperature {
+  padding-right: 1.55556rem;
+  text-align: right;
+  color: #c1c1c1;
+}
+.wealist li .temperature .low {
+  color: #0e95f3;
+}
+.wealist li .temperature .high {
+  color: #ff8814;
+}
+.wealist li.today .date span, .wealist li.tomorrow .date span, .wealist li.today .phrase, .wealist li.tomorrow .phrase {
+  color: #333;
+}
+.wealist li.rest-day .date span {
+  color: #0e95f3;
+}
+
+section.today-life-index .btitle, section.aqi-pm .btitle, section.hot-city .btitle, section.nearby-city .btitle {
+  padding: 0 1.03704rem;
+  line-height: 2.81481rem;
+  font-size: 1.18519rem;
+  color: #333;
+  background: #ebf6ff;
+}
+section.today-life-index .btitle:before, section.aqi-pm .btitle:before, section.hot-city .btitle:before, section.nearby-city .btitle:before {
+  content: "";
+  display: inline-block;
+  width: 0.22222rem;
+  height: 1.25926rem;
+  margin-right: 0.37037rem;
+  vertical-align: -8%;
+  background: #3c9df9;
+}
+
+section.city-list .btitle, section.town-list .btitle, section.select-list .btitle, section.select-city .btitle {
+  margin-top: 1.18519rem;
+  font-size: 1.18519rem;
+  text-align: center;
+  color: #333;
+}
+
+section.today-life-index .bmeta dt {
+  display: table;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.48148rem 0 0.74074rem 2.03704rem;
+}
+section.today-life-index .bmeta dt div {
+  display: table-cell;
+  vertical-align: middle;
+  width: 2.37037rem;
+}
+section.today-life-index .bmeta dt img {
+  width: 2.44444rem;
+  height: 2.44444rem;
+}
+section.today-life-index .bmeta dt p {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 1.11111rem;
+  font-size: 1.11111rem;
+  line-height: 1.85185rem;
+}
+section.today-life-index .bmeta dd {
+  display: table;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #e5e5e5;
+}
+section.today-life-index .bmeta dd div {
+  display: table-cell;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 50%;
+  padding: 0.88889rem 0 0.88889rem 1.85185rem;
+}
+section.today-life-index .bmeta dd span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1.11111rem;
+  -webkit-flex: 0 0 2.14815rem;
+  flex: 0 0 2.14815rem;
+}
+section.today-life-index .bmeta dd p {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.11111rem;
+}
+
+.progress {
+  width: 24.37037rem;
+  height: 2.37037rem;
+  margin: 0 auto 3.33333rem;
+  background: url("http://waptianqi.2345.com/images/aqi-detail-140710@720.png") no-repeat;
+  background-size: 24.37037rem 2.37037rem;
+}
+.progress .scale {
+  position: relative;
+  height: 2.37037rem;
+  margin: 0 1.51852rem 0 0.51852rem;
+}
+.progress .cur {
+  position: absolute;
+  top: 2.38889rem;
+  width: 2.62963rem;
+  height: 3.07407rem;
+  margin-left: -1.31481rem;
+  text-align: center;
+  line-height: 3.33333rem;
+  color: #fff;
+  font-size: 0.92593rem;
+}
+
+.aqi-pm-lv1 .phrase {
+  color: #66cc00;
+}
+.aqi-pm-lv1 .progress .cur {
+  background: url(http://waptianqi.2345.com/images/aqi-detail-cur150923@720/lv1.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.aqi-pm-lv2 .phrase {
+  color: #fbd12a;
+}
+.aqi-pm-lv2 .progress .cur {
+  background: url(http://waptianqi.2345.com/images/aqi-detail-cur150923@720/lv2.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.aqi-pm-lv3 .phrase {
+  color: #ffa641;
+}
+.aqi-pm-lv3 .progress .cur {
+  background: url(http://waptianqi.2345.com/images/aqi-detail-cur150923@720/lv3.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.aqi-pm-lv4 .phrase {
+  color: #fe0000;
+}
+.aqi-pm-lv4 .progress .cur {
+  background: url(http://waptianqi.2345.com/images/aqi-detail-cur150923@720/lv4.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.aqi-pm-lv5 .phrase {
+  color: #cc0001;
+}
+.aqi-pm-lv5 .progress .cur {
+  background: url(http://waptianqi.2345.com/images/aqi-detail-cur150923@720/lv5.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.aqi-pm-lv6 .phrase {
+  color: #970454;
+}
+.aqi-pm-lv6 .progress .cur {
+  background: url(http://waptianqi.2345.com/images/aqi-detail-cur150923@720/lv6.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.aqi-pm-lv7 .phrase {
+  color: #62001e;
+}
+.aqi-pm-lv7 .progress .cur {
+  background: url(http://waptianqi.2345.com/images/aqi-detail-cur150923@720/lv7.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+section.aqi-pm .aqi_container {
+  padding: 2.11111rem 0 1.48148rem;
+  overflow: hidden;
+}
+section.aqi-pm .aqi_container h3 {
+  text-align: center;
+  font-size: 1.33333rem;
+  margin-bottom: 2.14815rem;
+}
+
+section.hot-city .bmeta table, section.nearby-city .bmeta table, section.city-list table, section.town-list table, section.select-list table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+}
+section.hot-city .bmeta td, section.nearby-city .bmeta td, section.city-list td, section.town-list td, section.select-list td {
+  padding: 0.92593rem;
+  font-size: 1.03704rem;
+}
+
+section.hot-city .bmeta, section.nearby-city .bmeta {
+  margin: 0.62963rem 1.03704rem;
+}
+section.hot-city .bmeta table td, section.nearby-city .bmeta table td {
+  width: 50%;
+}
+
+section.nearby-city {
+  padding-bottom: 1.48148rem;
+}
+
+section.city-list .bmeta, section.town-list .bmeta, section.select-list .bmeta {
+  margin: 0.88889rem 1.03704rem;
+}
+section.city-list .bmeta a, section.town-list .bmeta a, section.select-list .bmeta a {
+  color: #666;
+}
+
+section.city-list table td {
+  width: 33.33333%;
+}
+section.city-list a:active {
+  color: #268dea;
+}
+
+section.town-list table td {
+  width: 33.33333%;
+}
+section.town-list a:active {
+  color: #268dea;
+}
+
+section.select-list table td {
+  width: 20%;
+}
+section.select-list td {
+  padding: 0.92593rem 0.74074rem;
+}
+section.select-list a:active {
+  color: #268dea;
+}
+
+section.select-city .bmeta {
+  margin-top: 0.88889rem;
+  padding: 0 1rem 0 0.85185rem;
+  border-top: 1px solid #e5e5e5;
+}
+section.select-city .bmeta dt {
+  float: left;
+  width: 1.48148rem;
+  height: 1.48148rem;
+  margin-left: 0.33333rem;
+  margin-top: 1.07407rem;
+  line-height: 1.48148rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.18519rem;
+  font-size: 1.11111rem;
+  text-align: center;
+  background: #f2f2f2;
+  color: #268dea;
+}
+section.select-city .bmeta dd {
+  padding-top: 1.07407rem;
+  padding-left: 2.03704rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+section.select-city .bmeta dd:last-of-type {
+  border: none;
+}
+section.select-city .bmeta dd a {
+  display: inline-block;
+  margin: 0 0.55556rem 1.18519rem 1.11111rem;
+  line-height: 1.48148rem;
+  font-size: 1.18519rem;
+}
+section.select-city .bmeta dd a:active, section.select-city .bmeta dd a.active {
+  color: #268dea;
+}
+
+.wl-10, .wl-11, .wl-12, .wl-13, .wl-14, .wl-16, .wl-17, .wl-19, .wl-20, .wl-26, .wl-28, .wl-28_net, .wl-32, .wl-32_net, .wl-37, .wl-39, .wl-39_net, .wl-40, .wl-41, .wl-41_net, .wl-42, .wl-60, .wl-61, .wl-62, .wl-63, .wl-64, .wl-65, .wl-65_net {
+  background: url('../images/wl-s41c053a28a.png');
+  background-size: 3.7037rem 107.7037rem;
+  background-repeat: no-repeat;
+}
+.wl-10 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 0;
+}
+
+.wl-11 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -3.85185rem;
+}
+
+.wl-12 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -7.7037rem;
+}
+
+.wl-13 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -11.55556rem;
+}
+
+.wl-14 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -15.40741rem;
+}
+
+.wl-16 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -19.25926rem;
+}
+
+.wl-17 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -23.11111rem;
+}
+
+.wl-19 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -26.96296rem;
+}
+
+.wl-20 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -30.81481rem;
+}
+
+.wl-26 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -34.66667rem;
+}
+
+.wl-28 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -38.51852rem;
+}
+
+.wl-28_net {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -42.37037rem;
+}
+
+.wl-32 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -46.22222rem;
+}
+
+.wl-32_net {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -50.07407rem;
+}
+
+.wl-37 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -53.92593rem;
+}
+
+.wl-39 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -57.77778rem;
+}
+
+.wl-39_net {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -61.62963rem;
+}
+
+.wl-40 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -65.48148rem;
+}
+
+.wl-41 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -69.33333rem;
+}
+
+.wl-41_net {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -73.18519rem;
+}
+
+.wl-42 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -77.03704rem;
+}
+
+.wl-60 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -80.88889rem;
+}
+
+.wl-61 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -84.74074rem;
+}
+
+.wl-62 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -88.59259rem;
+}
+
+.wl-63 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -92.44444rem;
+}
+
+.wl-64 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -96.2963rem;
+}
+
+.wl-65 {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -100.14815rem;
+}
+
+.wl-65_net {
+  width: 3.7037rem;
+  height: 3.7037rem;
+  background-position: 0 -104rem;
+}
+
+.ws-10, .ws-11, .ws-12, .ws-13, .ws-14, .ws-16, .ws-19, .ws-20, .ws-20_net, .ws-26, .ws-28, .ws-28_net, .ws-32, .ws-32_net, .ws-37_net, .ws-39, .ws-39_net, .ws-40, .ws-41, .ws-41_net, .ws-42, .ws-60, .ws-61, .ws-62, .ws-63, .ws-64, .ws-65, .ws-65_net {
+  background: url('../images/ws-sd75e63225e.png');
+  background-size: 1.92593rem 57.92593rem;
+  background-repeat: no-repeat;
+}
+.ws-10 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 0;
+}
+
+.ws-11 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -2.07407rem;
+}
+
+.ws-12 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -4.14815rem;
+}
+
+.ws-13 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -6.22222rem;
+}
+
+.ws-14 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -8.2963rem;
+}
+
+.ws-16 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -10.37037rem;
+}
+
+.ws-19 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -12.44444rem;
+}
+
+.ws-20 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -14.51852rem;
+}
+
+.ws-20_net {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -16.59259rem;
+}
+
+.ws-26 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -18.66667rem;
+}
+
+.ws-28 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -20.74074rem;
+}
+
+.ws-28_net {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -22.81481rem;
+}
+
+.ws-32 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -24.88889rem;
+}
+
+.ws-32_net {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -26.96296rem;
+}
+
+.ws-37_net {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -29.03704rem;
+}
+
+.ws-39 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -31.11111rem;
+}
+
+.ws-39_net {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -33.18519rem;
+}
+
+.ws-40 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -35.25926rem;
+}
+
+.ws-41 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -37.33333rem;
+}
+
+.ws-41_net {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -39.40741rem;
+}
+
+.ws-42 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -41.48148rem;
+}
+
+.ws-60 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -43.55556rem;
+}
+
+.ws-61 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -45.62963rem;
+}
+
+.ws-62 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -47.7037rem;
+}
+
+.ws-63 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -49.77778rem;
+}
+
+.ws-64 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -51.85185rem;
+}
+
+.ws-65 {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -53.92593rem;
+}
+
+.ws-65_net {
+  width: 1.92593rem;
+  height: 1.92593rem;
+  background-position: 0 -56rem;
+}
+
+.aqi-icon-lv1, .aqi-icon-lv2, .aqi-icon-lv3, .aqi-icon-lv4, .aqi-icon-lv5, .aqi-icon-lv6, .aqi-icon-lv7 {
+  background: url('../images/aqi-icon-s42d071a127.png');
+  background-size: 1.18519rem 9.18519rem;
+  background-repeat: no-repeat;
+}
+.aqi-icon-lv1 {
+  width: 1.18519rem;
+  height: 1.18519rem;
+  background-position: 0 0;
+}
+
+.aqi-icon-lv2 {
+  width: 1.18519rem;
+  height: 1.18519rem;
+  background-position: 0 -1.33333rem;
+}
+
+.aqi-icon-lv3 {
+  width: 1.18519rem;
+  height: 1.18519rem;
+  background-position: 0 -2.66667rem;
+}
+
+.aqi-icon-lv4 {
+  width: 1.18519rem;
+  height: 1.18519rem;
+  background-position: 0 -4rem;
+}
+
+.aqi-icon-lv5 {
+  width: 1.18519rem;
+  height: 1.18519rem;
+  background-position: 0 -5.33333rem;
+}
+
+.aqi-icon-lv6 {
+  width: 1.18519rem;
+  height: 1.18519rem;
+  background-position: 0 -6.66667rem;
+}
+
+.aqi-icon-lv7 {
+  width: 1.18519rem;
+  height: 1.18519rem;
+  background-position: 0 -8rem;
+}
+
+.life-carwash1, .life-carwash2, .life-cold1, .life-cold2, .life-dressed1, .life-dressed2, .life-driving1, .life-driving2, .life-fishing1, .life-fishing2, .life-moring1, .life-moring2, .life-rain1, .life-rain2, .life-sun1, .life-sun2 {
+  background: url('../images/life-saba59cf241.png');
+  background-size: 2.14815rem 36.59259rem;
+  background-repeat: no-repeat;
+}
+.life-carwash1 {
+  width: 2.14815rem;
+  height: 2.14815rem;
+  background-position: 0 0;
+}
+
+.life-carwash2 {
+  width: 2.14815rem;
+  height: 2.14815rem;
+  background-position: 0 -2.2963rem;
+}
+
+.life-cold1 {
+  width: 2.14815rem;
+  height: 2.14815rem;
+  background-position: 0 -4.59259rem;
+}
+
+.life-cold2 {
+  width: 2.14815rem;
+  height: 2.14815rem;
+  background-position: 0 -6.88889rem;
+}
+
+.life-dressed1 {
+  width: 2.14815rem;
+  height: 2.14815rem;
+  background-position: 0 -9.18519rem;
+}
+
+.life-dressed2 {
+  width: 2.14815rem;
+  height: 2.14815rem;
+  background-position: 0 -11.48148rem;
+}
+
+.life-driving1 {
+  width: 2.14815rem;
+  height: 2.14815rem;
+  background-position: 0 -13.77778rem;
+}
+
+.life-driving2 {
+  width: 2.14815rem;
+  height: 2.14815rem;
+  background-position: 0 -16.07407rem;
+}
+
+.life-fishing1 {
+  width: 2.14815rem;
+  height: 2.14815rem;
+  background-position: 0 -18.37037rem;
+}
+
+.life-fishing2 {
+  width: 2.14815rem;
+  height: 2.14815rem;
+  background-position: 0 -20.66667rem;
+}
+
+.life-moring1 {
+  width: 2.14815rem;
+  height: 2.14815rem;
+  background-position: 0 -22.96296rem;
+}
+
+.life-moring2 {
+  width: 2.14815rem;
+  height: 2.14815rem;
+  background-position: 0 -25.25926rem;
+}
+
+.life-rain1 {
+  width: 2.14815rem;
+  height: 2.14815rem;
+  background-position: 0 -27.55556rem;
+}
+
+.life-rain2 {
+  width: 2.14815rem;
+  height: 2.14815rem;
+  background-position: 0 -29.85185rem;
+}
+
+.life-sun1 {
+  width: 2.14815rem;
+  height: 2.14815rem;
+  background-position: 0 -32.14815rem;
+}
+
+.life-sun2 {
+  width: 2.14815rem;
+  height: 2.14815rem;
+  background-position: 0 -34.44444rem;
+}
