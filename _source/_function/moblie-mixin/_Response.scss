@@ -11,7 +11,7 @@ $Response:false !default;
         $htmlSize: floor($rem-base * $key / $desgin-width);
         @media #{$value} {
             html {
-                font-size: $htmlSize;
+                font-size: #{$htmlSize}px;
             }
         }
     }
