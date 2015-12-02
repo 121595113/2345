@@ -84,17 +84,17 @@ a {
 
 @media only screen {
   html {
-    font-size: 12;
+    font-size: 12px;
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 479px) {
   html {
-    font-size: 14;
+    font-size: 14px;
   }
 }
 @media only screen and (min-width: 480px) {
   html {
-    font-size: 18;
+    font-size: 18px;
   }
 }
 .wrapper {
