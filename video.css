@@ -453,6 +453,6 @@ video::-webkit-media-text-track-container i {
 /*自定义动画*/
 
 @-webkit-keyframes rotate {
-  from {-webkit-transform:rotate(0deg);}
-  to {-webkit-transform:rotate(360deg);}
+  from {-webkit-transform:rotateZ(0deg);}
+  to {-webkit-transform:rotateZ(360deg);}
 }
