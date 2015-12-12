@@ -75,8 +75,7 @@ audio::-webkit-media-controls-panel, video::-webkit-media-controls-panel {
     /* We use flex-start here to ensure that the play button is visible even
                              * if we are too small to show all controls.
                              */
-    /*     justify-content: flex-start; */
-    justify-content:space-between;
+    justify-content: flex-start;
     -webkit-user-select: none;
     position: relative;
     width: 100%;
@@ -195,7 +194,7 @@ audio::-webkit-media-controls-play-button, video::-webkit-media-controls-play-bu
     background-color: initial;
     color: inherit;
     /*自定义样式*/
-    /*-webkit-animation: rotate 1.5s linear infinite;*/
+/*     -webkit-animation: rotate 1.5s linear infinite; */
 }
 
 /*进度条外部容器*/
@@ -239,7 +238,7 @@ audio::-webkit-media-controls-time-remaining-display, video::-webkit-media-contr
     text-shadow: none;
     text-decoration: none;
     /*   自定义样式   */
-    margin-right:auto;
+/*     margin-right:auto; */
 }
 
 /*进度条样式*/
@@ -260,7 +259,7 @@ audio::-webkit-media-controls-timeline, video::-webkit-media-controls-timeline {
     left: 0;
     width: 100%;
     height:4px;
-    background-color:red;
+/*     background-color:rgba(0,100,255,.5); */
 }
 
 /*音量调节滑动组件*/
@@ -324,6 +323,7 @@ audio::-webkit-media-controls-fullscreen-button, video::-webkit-media-controls-f
     padding: 0;
     background-color: initial;
     color: inherit;
+    margin-left:auto;
 }
 
 audio::-internal-media-controls-cast-button, video::-internal-media-controls-cast-button {
