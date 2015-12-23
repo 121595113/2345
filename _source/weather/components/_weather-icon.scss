@@ -1,4 +1,4 @@
-@import "mixin/rem-sprites";
+@import "../mixin/rem-sprites";
 // 天气大图标
 $wl-icon:sprite-map("wl/*.png", $spacing: 4px);
 @include rem-sprites($wl-icon);

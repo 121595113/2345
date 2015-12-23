@@ -42,6 +42,7 @@ $lists:() !default;
     $names: sprite-names($map);
 
     @include exports($my-args) {
+        @debug sprite-url($map);
         @at-root {          
             @each $name in $names {
                 $lists: map-merge($lists,(#{$my-args}-size: calc-width($map) calc-height($map))) !global;
