@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>视频测试页</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="video.css">
+    <meta charset="UTF-8">
+    <title>视频测试页</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="video.css">
 </head>
+
 <body>
-	<video id="media" controls="controls" name="media" preload="preload" width="100%">
-		<source src="http://vod.weathertv.cn/2015/11/11/ThmY59m_1447242867903_90arsui_2.mp4" type="video/mp4"/>
-	</video>
+    <video id="media" controls="controls" name="media" preload="preload" width="100%">
+        <source src="http://vod.weathertv.cn/2015/11/11/ThmY59m_1447242867903_90arsui_2.mp4" type="video/mp4" />
+    </video>
+    <script>
+    // 创建元素
+    (function() {
+        var ODiv = document.createElement("div");
+        ODiv.setAttribute('class', 'video_loading_icon');
+        ODiv.style.display = "none";
+        document.body.appendChild(ODiv);
+
+    })();
+
+    // 添加事件
+    window.onload = function() {
+        var Loading = document.querySelector('.video_loading_icon'),
+            video = document.querySelector('video'),
+            // 计算中心点离左边的偏移值
+            _left = video.offsetLeft + video.offsetWidth / 2,
+            // 计算中心点离顶部的偏移值
+            _top = video.offsetTop + video.offsetHeight / 2;
+
+        video.addEventListener('canplay', function() {
+            Loading.style.display = "block";
+            Loading.style.left = _left + "px";
+            Loading.style.top = _top + "px";
+        });
+    }
+    </script>
 </body>
+
 </html>
