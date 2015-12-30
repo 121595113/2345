@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>视频测试页</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<body>
+    <div id="test"></div>
+</body>
+<script>
+var div = document.getElementById("test");
+var root = div.createShadowRoot();
+root.innerHTML = "<style>h1 { position:absolute;top:200px;left:200px;font-size: 24px; color: blue; -webkit-animation:rotate 20s infinite linear;} @-webkit-keyframes rotate{from {-webkit-transform:rotateZ(0deg);}to {-webkit-transform:rotateZ(360deg);}}</style>" +
+    "<h1 class='tests'>你好</h1>";
+</script>
+
+</html>

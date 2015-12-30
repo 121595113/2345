@@ -12,31 +12,26 @@
     <video id="media" controls="controls" name="media" preload="preload" width="100%">
         <source src="http://vod.weathertv.cn/2015/11/11/ThmY59m_1447242867903_90arsui_2.mp4" type="video/mp4" />
     </video>
+    <input type="date">
     <script>
-    // 创建元素
-    (function() {
-        var ODiv = document.createElement("div");
-        ODiv.setAttribute('class', 'video_loading_icon');
-        ODiv.style.display = "none";
-        document.body.appendChild(ODiv);
+    var div = document.createElement("div");
+    var root = div.createShadowRoot();
+    root.innerHTML = "<style>.video_loading_icon { position:absolute;width:50px;height:50px;margin-left:-25px; margin-top:-25px;background: red;-webkit-animation:rotate 1.5s infinite linear;} @-webkit-keyframes rotate{from {-webkit-transform:rotateZ(0deg);}to {-webkit-transform:rotateZ(360deg);}}</style>" +
+        "<div class='video_loading_icon'></div>";
+    document.body.appendChild(root);
 
-    })();
-
-    // 添加事件
-    window.onload = function() {
-        var Loading = document.querySelector('.video_loading_icon'),
-            video = document.querySelector('video'),
-            // 计算中心点离左边的偏移值
-            _left = video.offsetLeft + video.offsetWidth / 2,
+    var video = document.querySelector('video'),
+        Loading = document.querySelector('.video_loading_icon');
+    Loading.style.display = "none";
+    video.addEventListener('canplay', function() {
+        // 计算中心点离左边的偏移值
+        var _left = video.offsetLeft + video.offsetWidth / 2,
             // 计算中心点离顶部的偏移值
             _top = video.offsetTop + video.offsetHeight / 2;
-
-        video.addEventListener('canplay', function() {
-            Loading.style.display = "block";
-            Loading.style.left = _left + "px";
-            Loading.style.top = _top + "px";
-        });
-    }
+        Loading.style.display = "block";
+        Loading.style.left = _left + "px";
+        Loading.style.top = _top + "px";
+    });
     </script>
 </body>
 
