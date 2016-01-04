@@ -1,11 +1,15 @@
 @charset "utf-8";
-$rem-base:27px;
+// $reset:true;
+$designWidth:720;
 @import "moblie-mixin";
 
 .wrapper {
     width: rem-calc(720);
+    height: 0;
+    border-top: 1px solid red;
+    background: red;
     font-size: rem-calc(10);
+    background-size: rem-calc(30 90);
     min-height: 100%;
     position: relative;
-    padding-bottom: rem-calc(112 + 50/1.5);
 }

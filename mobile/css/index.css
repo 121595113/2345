@@ -1,9 +1,12 @@
 .wrapper {
-  width: 26.66667rem;
-  font-size: 0.37037rem;
+  width: 16rem;
+  height: 0;
+  border-top: 1px solid red;
+  background: red;
+  font-size: 0.22222rem;
+  background-size: 0.66667rem 2rem;
   min-height: 100%;
   position: relative;
-  padding-bottom: 5.38272rem;
 }
 
 /*# sourceMappingURL=index.css.map */
