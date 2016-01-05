@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAKA,QAAS;EACL,KAAK,EAAE,KAAa;EACpB,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,aAAa;EACzB,UAAU,EAAE,GAAG;EACf,SAAS,EAAE,UAAY;EACvB,eAAe,ECCC,eAAyD;EDAzE,UAAU,EAAE,IAAI;EAChB,QAAQ,EAAE,QAAQ",
-"sources": ["../../_source/mobile/index.scss","../../_source/_function/moblie-mixin/_px2rem.scss"],
-"names": [],
-"file": "index.css"
-}

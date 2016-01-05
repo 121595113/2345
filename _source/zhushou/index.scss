@@ -1,0 +1,22 @@
+@charset "utf-8";
+$reset:true;
+$designWidth:720;
+@import "moblie-mixin";
+
+.wrapper {
+	margin-top: rem-calc(20);
+    width: rem-calc(720);
+    height: 0;
+    border-top: rem-calc(1) solid red;
+    background: red;
+    font-size: rem-calc(10);
+    background-size: rem-calc(30 90);
+    min-height: 100%;
+    position: relative;
+}
+.line2{
+	margin-top: rem-calc(20);
+	height: rem-calc(2);
+	background: blue;
+}
+

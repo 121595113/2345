@@ -3,11 +3,11 @@ require 'compass/import-once/activate'
 
 # Set this to the root of your project when deployed:
 # 项目名称和项目路径
-projectname="moblie"
+projectname="zhushou"
 projectPath="#{projectname}"
 
 http_path = "/"
-#additional_import_paths = ["_source/_function"]
+additional_import_paths = ["_source/_function"]
 sass_dir = "_source/#{projectname}"
 css_dir = "#{projectPath}/css"
 images_dir = "#{projectPath}/images"
