@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>shadow dom案例</title>
+    <style>
+    	button{
+    		background: none;
+    	}
+    	#my-widget{
+    		background: 
+    	}
+    </style>
+</head>
+
+<body>
+    <template id="wgTemplate">
+        <style>
+        .btn {
+            color: #fff;
+            background: #006dcc;
+        }
+        </style>
+        <button type="button" class="btn">button widget</button>
+    </template>
+    <div id="my-widget"></div>
+    <script type='text/javascript'>
+      var host = document.querySelector("#my-widget")
+      var tp = document.querySelector("#wgTemplate")
+      var clone = document.importNode(tp.content, true)
+      host.createShadowRoot().appendChild(clone)
+    </script>
+</body>
+
+</html>

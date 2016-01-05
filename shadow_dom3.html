@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>shaddow Dom3</title>
+    <style>
+    	my-element::shadow span{
+    		color: red
+    	}
+    </style>
+</head>
+
+<body>
+    <my-element>
+        这是一个轻量级 DOM。
+        <i>hello</i>
+        <i>world</i>
+    </my-element>
+    <span>I'm not green</span>
+    <script>
+    var MyElement = document.registerElement('my-element', {
+        prototype: Object.create(HTMLElement.prototype, {
+            createdCallback: {
+                value: function() {
+                    var shadow = this.createShadowRoot();
+
+                    // shadow.innerHTML = '‘轻量级 DOM 中的 "i" 标签为: ' +
+                    //     '<content select="i" />';
+
+                    shadow.innerHTML = "<style>span { color: green }</style>" +
+                        "<span>I'm green</span>";
+                }
+            }
+        })
+
+    });
+    console.log(MyElement);
+    </script>
+</body>
+
+</html>
