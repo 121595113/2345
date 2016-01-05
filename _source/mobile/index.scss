@@ -4,7 +4,7 @@ $designWidth:720;
 @import "moblie-mixin";
 
 .wrapper {
-    width: 100%;
+    width: rem-calc(720);
     height: 0;
     border-top: 1px solid red;
     background: red;
@@ -13,4 +13,3 @@ $designWidth:720;
     min-height: 100%;
     position: relative;
 }
-
