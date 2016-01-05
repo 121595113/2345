@@ -1,4 +1,4 @@
-@echo off
+@echo on
 
 rem …Ë÷√±‰¡ø
 set batDirDrive=%~dp0
