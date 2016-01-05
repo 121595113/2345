@@ -1,3 +1,4 @@
+@charset "utf-8";
 html { overflow-y: scroll; -webkit-text-size-adjust: 100%; }
 html * { -webkit-tap-highlight-color: transparent; -webkit-tap-highlight-color: transparent; }
 
@@ -82,7 +83,7 @@ section.pic-show .bmeta li img { width: 100%; }
 section.tel { background: #adadad; margin-bottom: 0.14815rem; }
 section.tel .btitle { padding-left: 1.48148rem; line-height: 2.14815rem; background: #cbcbcb; }
 section.tel .bmeta { line-height: 2.14815rem; padding-left: 1.48148rem; font-size: 0.88889rem; color: #232323; }
-section.tel .bmeta .tel-icon { float: right; margin-top: 0.37037rem; margin-right: 0.74074rem; display: inline-block; line-height: 2.14815rem; width: 1.2963rem; height: 1.2963rem; background: url('../images/tel-icon.png?1449066745'); background-size: 1.2963rem 1.2963rem; }
+section.tel .bmeta .tel-icon { float: right; margin-top: 0.37037rem; margin-right: 0.74074rem; display: inline-block; line-height: 2.14815rem; width: 1.2963rem; height: 1.2963rem; background: url('../images/tel-icon.png?1451960324'); background-size: 1.2963rem 1.2963rem; }
 
 .foot-guanzhu, .foot-my, .foot-quanzi, .foot-zhaoren { background: url('../images/foot-s2eff3f2a98.png'); background-size: 1.48148rem 6.37037rem; background-repeat: no-repeat; }
 .foot-guanzhu { width: 1.48148rem; height: 1.48148rem; background-position: 0 0; }
@@ -128,4 +129,4 @@ section.my-list .bmeta dd:last-child a { border: none; }
 .footer .contain li { display: table-cell; height: 2.88889rem; position: relative; z-index: 2; text-align: center; vertical-align: middle; }
 .footer .contain span { display: block; margin: 0 auto; }
 .footer .contain .specity { top: 0.37037rem; width: 3.62963rem; height: 3.62963rem; }
-.footer .contain .specity a { position: relative; top: -0.74074rem; display: inline-block; vertical-align: top; width: 3.62963rem; height: 3.62963rem; border-radius: 50%; background: url('../images/foot-logo.png?1449066745'); background-size: 3.62963rem 3.62963rem; }
+.footer .contain .specity a { position: relative; top: -0.74074rem; display: inline-block; vertical-align: top; width: 3.62963rem; height: 3.62963rem; border-radius: 50%; background: url('../images/foot-logo.png?1451960324'); background-size: 3.62963rem 3.62963rem; }
