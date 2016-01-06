@@ -1,4 +1,4 @@
-/*
+
  * Copyright (C) 2009 Apple Inc.  All rights reserved.
  * Copyright (C) 2009 Google Inc.
  *
@@ -114,7 +114,8 @@ video:-webkit-full-page-media::-webkit-media-controls-panel {
 /*小喇叭控件*/
 audio::-webkit-media-controls-mute-button, video::-webkit-media-controls-mute-button {
     -webkit-appearance: media-mute-button;
-    display: flex;
+   /* display: flex;*/
+    display: none;
     flex: none;
     border: none;
     box-sizing: border-box;
@@ -185,16 +186,16 @@ audio::-webkit-media-controls-play-button, video::-webkit-media-controls-play-bu
     flex: none;
     border: none;
     box-sizing: border-box;
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     line-height: 30px;
     margin-left: 9px;
-    margin-right: 9px;
+    margin-right: 15px;
     padding: 0;
     background-color: initial;
-    color: inherit;
-    /*自定义样式*/
-/*     -webkit-animation: rotate 1.5s linear infinite; */
+    order: 0;
+    color: inherit;/*自定义样式*/
+    /*     -webkit-animation: rotate 1.5s linear infinite; */
 }
 
 /*进度条外部容器*/
@@ -216,29 +217,34 @@ audio::-webkit-media-controls-time-remaining-display, video::-webkit-media-contr
     -webkit-appearance: media-current-time-display;
     -webkit-user-select: none;
     flex: none;
-    display: flex;
+    display: flex !important;
     border: none;
     cursor: default;
-    
     height: 30px;
-    margin: 0 9px 0 0;
+    margin: 0 15px 0 0;
     padding: 0;
-    
     line-height: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-weight: normal;
     font-style: normal;
-    color: white;
-    
+    color: #dbdbdb;
     letter-spacing: normal;
     word-spacing: normal;
     text-transform: none;
     text-indent: 0;
     text-shadow: none;
-    text-decoration: none;
-    /*   自定义样式   */
-/*     margin-right:auto; */
+    text-decoration: none;/*   自定义样式   */
+    /*     margin-right:auto; */
+}
+
+/*yut*/
+video::-webkit-media-controls-current-time-display{
+    order: 2;
+    margin-right: 3px;
+}
+video::-webkit-media-controls-time-remaining-display{
+    order: 4;
 }
 
 /*进度条样式*/
@@ -246,27 +252,20 @@ audio::-webkit-media-controls-timeline, video::-webkit-media-controls-timeline {
     -webkit-appearance: media-slider;
     display: flex;
     flex: 1 1 auto;
-    height: 8px;
-    margin: 0 15px 0 0;
+    height: 6px;
+    margin: 0 3px 0 0;
     padding: 0;
     background-color: transparent;
     min-width: 25px;
     border: initial;
-    color: inherit;
-    /* 自定义样式  */
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height:4px;
-/*     background-color:rgba(0,100,255,.5); */
+    color: inherit;/* 自定义样式  */
+    order: 3;
 }
 
 /*音量调节滑动组件*/
 audio::-webkit-media-controls-volume-slider, video::-webkit-media-controls-volume-slider {
     -webkit-appearance: media-volume-slider;
-    display: flex;
-    /* The 1.9 value was empirically chosen to match old-flexbox behaviour
+    display: none;/* The 1.9 value was empirically chosen to match old-flexbox behaviour
                              * and be aesthetically pleasing.
                              */
     flex: 1 1.9 auto;
@@ -315,8 +314,8 @@ audio::-webkit-media-controls-fullscreen-button, video::-webkit-media-controls-f
     flex: none;
     border: none;
     box-sizing: border-box;
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     line-height: 30px;
     margin-left: -5px;
     margin-right: 9px;
@@ -324,6 +323,7 @@ audio::-webkit-media-controls-fullscreen-button, video::-webkit-media-controls-f
     background-color: initial;
     color: inherit;
     margin-left:auto;
+    order: 10;
 }
 
 audio::-internal-media-controls-cast-button, video::-internal-media-controls-cast-button {
@@ -464,4 +464,4 @@ video::-webkit-media-text-track-container i {
     background: red;
     position: absolute;
      -webkit-animation: rotate 1.5s linear infinite; 
-}*/
+}
