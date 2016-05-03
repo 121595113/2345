@@ -130,7 +130,7 @@ $lists:() !default;
     $names: sprite-names($map);
     $dir-name: sprite-map-name($map);
     @each $name in $names {
-        .#{$dir-name+"-"+$name} {
+        .#{$dir-name+$default-sprite-separator+$name} {
             @include rem-sprite($map, $name, $dimensions, $active);
         }
     }
