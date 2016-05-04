@@ -12,6 +12,7 @@ $modules: () !default;
         @content;
     }
 }
+
 //
 // @functions
 //
@@ -39,7 +40,12 @@ $modules: () !default;
 
 // CONVERT TO REM
 @function convert-to-rem($value, $base-value: $rem-base) {
-    $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+    @if $value==auto {
+        $value: auto;
+    }
+    @else {
+        $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+    }
     @if ($value==0rem) {
         $value: 0;
     } // Turn 0rem into 0
